@@ -64,6 +64,7 @@ def get_info(url):
 
     except Exception as e:
         print(f"An error occurred: {e}")
+        input("Press Enter to Continue...")
 
 
 def download_playlist(videos):
@@ -114,18 +115,24 @@ def download_playlist(videos):
             end="\n\n",
         )
 
+        input("Press Enter to Continue...")
+
     except Exception as e:
         print(f"An error occurred: {e}")
+        input("Press Enter to Continue...")
 
 
 def main():
 
     try:
+
+        Welcome()
+
         url = input("Enter the URL of the playlist >> ").strip()
-        print(" Loading ... ".center(80, "=").title(), end="\n\n")
 
         if url:
 
+            print(" Loading ... ".center(80, "=").title(), end="\n\n")
             if url.startswith("https://youtube.com/playlist?list="):
 
                 videos = get_info(url)
@@ -137,12 +144,14 @@ def main():
                 else:
 
                     print("No videos found in the playlist.".title())
+                    input("Press Enter to Continue...")
 
             else:
 
                 print(
                     "Invalid URL...\nPlease check that Your URL starts with >> https://youtube.com/playlist?list=".title()
                 )
+                input("Press Enter to Continue...")
 
         else:
 
@@ -150,11 +159,12 @@ def main():
 
     except ValueError as ve:
         print(f"ValueError: {ve}")
+        input("Press Enter to Continue...")
 
     except Exception as e:
         print(f"An error occurred: {e}")
+        input("Press Enter to Continue...")
 
 
 if __name__ == "__main__":
-    Welcome()
     main()

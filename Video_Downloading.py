@@ -55,11 +55,13 @@ def get_info(url):
 
     except Exception as e:
         print(f"An error occurred: {e}")
+        input("Press Enter to Continue...")
 
 
 def download_video(video_info):
     if not video_info:
         print("No video information available. Cannot download.")
+        input("Press Enter to Continue...")
         return
 
     try:
@@ -78,6 +80,7 @@ def download_video(video_info):
             video_download.download([video_info["webpage_url"]])
 
         print(" Video downloaded successfully ".center(80, "="), end="\n\n")
+        input("Press Enter to Continue...")
 
     except yt_dlp.utils.DownloadError as e:
         print(f"Download error occurred: {e}")
@@ -104,9 +107,11 @@ def main():
 
     except ValueError as ve:
         print(f"ValueError: {ve}")
+        input("Press Enter to Continue...")
 
     except Exception as e:
         print(f"An error occurred: {e}")
+        input("Press Enter to Continue...")
 
 
 if __name__ == "__main__":
