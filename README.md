@@ -1,6 +1,6 @@
 # My-Downloader Script
 
-# My-Downloader is a Python script that allows you to download videos and playlists from YouTube.
+- My-Downloader is a Python script that allows you to download videos and playlists from YouTube.
 
 # Features:
 
@@ -11,7 +11,6 @@
 - Install yt-dlp with `pip install yt-dlp`
 - Download the script and run it by typing `python My-Downloader.py`
 
-# Coded By : Mohamed Yousri , Email : Mohamed.Yousri.Mahrous@gmail.com
 
 
 
