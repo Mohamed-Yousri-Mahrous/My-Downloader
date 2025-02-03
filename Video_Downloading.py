@@ -84,8 +84,11 @@ def download_video(video_info):
 
     except yt_dlp.utils.DownloadError as e:
         print(f"Download error occurred: {e}")
+        input("Press Enter to Continue...")
+
     except Exception as e:
         print(f"An error occurred: {e}")
+        input("Press Enter to Continue...")
 
 
 def main():
