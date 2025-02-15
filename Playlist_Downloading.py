@@ -3,168 +3,161 @@ import yt_dlp
 import re
 
 
-def Welcome():
-    os.system("cls" if os.name == "nt" else "clear")
-    print("=" * 80)
-    print(" Welcome to the Playlist Downloading program ".center(80, "=").title())
-    print(" Created By Mohamed Yousri ".center(80, "=").title())
-    print("=" * 80, end="\n\n")
+class Playlist:
 
+    def Welcome(self):
+        os.system("cls" if os.name == "nt" else "clear")
+        print("=" * 80)
+        print(" Welcome to the Playlist Downloading program ".center(80, "=").title())
+        print(" Created By Mohamed Yousri ".center(80, "=").title())
+        print("=" * 80, end="\n\n")
 
-def check_playlist_title(playlist_title):
-    # Replace invalid characters with a hyphen
-    return re.sub(r'[\\/:*?"<>|]', "-", playlist_title)
+    def check_playlist_title(self, playlist_title):
+        # Replace invalid characters with a hyphen
+        return re.sub(r'[\\/:*?"<>|]', "-", playlist_title)
 
+    def get_info(self, url):
+        try:
+            playlist_option = {
+                "extract_flat": True,
+                "quiet": True,
+                "no_warnings": True,
+            }
 
-def get_info(url):
+            with yt_dlp.YoutubeDL(playlist_option) as youtube_playlist:
+                playlist_info = youtube_playlist.extract_info(url, download=False)
 
-    try:
+            # Display the playlist information in the Terminal
+            playlist_title = playlist_info["title"]
+            playlist_count = playlist_info["playlist_count"]
+            Youtube_channel = playlist_info["channel"]
+            print(
+                f" - You are downloading the playlist: {playlist_title}".title(),
+                end="\n\n",
+            )
+            print(f" - From ({Youtube_channel}) Channel on YouTube".title(), end="\n\n")
+            print(
+                f" - Total videos in the playlist: {playlist_count}".title(), end="\n\n"
+            )
 
-        playlist_option = {
-            "extract_flat": True,  # Extract all the videos in the playlist once and not one by one
-            "quiet": True,  # Do not print anything on the console
-            "no_warnings": True,  # Do not print any warning
-        }
+            # Check if the playlist title is valid
+            playlist_title = self.check_playlist_title(playlist_title)
 
-        with yt_dlp.YoutubeDL(playlist_option) as youtube_playlist:
-            playlist_info = youtube_playlist.extract_info(url, download=False)
+            # change Directory To User Downloads Folder and Create a Folder with the Playlist Name
+            os.chdir(os.path.expanduser("~/Downloads"))
+            if not os.path.exists(playlist_title):
+                os.mkdir(playlist_title)
+            os.chdir(playlist_title)
 
-        # Display the playlist information in the Terminal
-        playlist_title = playlist_info["title"]
-        playlist_count = playlist_info["playlist_count"]
-        Youtube_channel = playlist_info["channel"]
-        print(
-            f" - You are downloading the playlist: {playlist_title}".title(), end="\n\n"
-        )
-        print(f" - From ({Youtube_channel}) Channel on YouTube".title(), end="\n\n")
-        print(f" - Total videos in the playlist: {playlist_count}".title(), end="\n\n")
+            print(
+                f" - The playlist will be Saved in the folder >> {os.getcwd()}".title(),
+                end="\n\n",
+            )
 
-        # Check if the playlist title is valid
-        playlist_title = check_playlist_title(playlist_title)
+            print(
+                f" Now downloading the playlist ... ".center(80, "=").title(),
+                end="\n\n",
+            )
+            videos = playlist_info["entries"]
 
-        # change Directory To User Downloads Folder and Create a Folder with the Playlist Name
-        os.chdir(os.path.expanduser("~/Downloads"))
-        if not os.path.exists(playlist_title):
-            os.mkdir(playlist_title)
-        os.chdir(playlist_title)
+            # manually assign playlist_index To videos information
+            for index, video in enumerate(videos, start=1):
+                video["playlist_index"] = index
 
-        print(
-            f" - The playlist will be Saved in the folder >> {os.getcwd()}".title(),
-            end="\n\n",
-        )
+            return videos
 
-        print(f" Now downloading the playlist ... ".center(80, "=").title(), end="\n\n")
-        videos = playlist_info["entries"]
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            input("Press Enter to Continue...")
 
-        # manually assign playlist_index To videos information
-        for index, video in enumerate(videos, start=1):
-            video["playlist_index"] = index
+    def download_playlist(self, videos):
+        try:
 
-        return videos
+            playlist_option = {
+                "format": "best",
+                "quiet": True,
+                "no_warnings": True,
+            }
 
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        input("Press Enter to Continue...")
+            for index, video in enumerate(videos, start=1):
 
+                try:
 
-def download_playlist(videos):
+                    file_name = f"{video['playlist_index']} - {video['title']}.mp4"
 
-    try:
+                    print(
+                        f"- Downloading video {index} of {len(videos)} - {video['title']} ".title(),
+                        end="\n\n",
+                    )
 
-        playlist_option = {
-            "format": "best",  # Download the best quality available\
-            "quiet": True,  # Show progress and info
-            "no_warnings": True,  # Show warnings
-        }
+                    video_option = {
+                        **playlist_option,
+                        "outtmpl": file_name,
+                    }
 
-        for index, video in enumerate(videos, start=1):
+                    with yt_dlp.YoutubeDL(video_option) as video_download:
+                        video_download.download([video["url"]])
 
-            try:
+                except Exception as e:
+                    print(f"An error occurred: {e}")
+                    print(
+                        f" retrying to download video {index} of {len(videos)} - {video['title']} again ".center(
+                            80, "="
+                        ).title(),
+                        end="\n\n",
+                    )
 
-                file_name = f"{video['playlist_index']} - {video['title']}.mp4"
+            print(
+                " All videos in the playlist have been downloaded successfully ".center(
+                    80, "="
+                ).title(),
+                end="\n\n",
+            )
 
-                print(
-                    f"- Downloading video {index} of {len(videos)} - {video['title']} ".title(),
-                    end="\n\n",
-                )
+            input("Press Enter to Continue...")
 
-                video_option = {
-                    **playlist_option,
-                    "outtmpl": file_name,
-                }
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            input("Press Enter to Continue...")
 
-                with yt_dlp.YoutubeDL(video_option) as video_download:
-                    video_download.download([video["url"]])
+    def main(self):
+        try:
 
-            except Exception as e:
-                print(f"An error occurred: {e}")
-                print(
-                    f" retrying to download video {index} of {len(videos)} - {video['title']} again ".center(
-                        80, "="
-                    ).title(),
-                    end="\n\n",
-                )
+            self.Welcome()
 
-                with yt_dlp.YoutubeDL(video_option) as video_download:
-                    video_download.download([video["url"]])
+            url = input("Enter the URL of the playlist >> ").strip()
 
-        print(
-            " All videos in the playlist have been downloaded successfully ".center(
-                80, "="
-            ).title(),
-            end="\n\n",
-        )
+            if url:
 
-        input("Press Enter to Continue...")
+                print(" Loading ... ".center(80, "=").title(), end="\n\n")
+                if url.startswith("https://youtube.com/playlist?list="):
 
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        input("Press Enter to Continue...")
+                    videos = self.get_info(url)
 
+                    if videos:
 
-def main():
+                        self.download_playlist(videos)
 
-    try:
+                    else:
 
-        Welcome()
-
-        url = input("Enter the URL of the playlist >> ").strip()
-
-        if url:
-
-            print(" Loading ... ".center(80, "=").title(), end="\n\n")
-            if url.startswith("https://youtube.com/playlist?list="):
-
-                videos = get_info(url)
-
-                if videos:
-
-                    download_playlist(videos)
+                        print("No videos found in the playlist.".title())
+                        input("Press Enter to Continue...")
 
                 else:
 
-                    print("No videos found in the playlist.".title())
+                    print(
+                        "Invalid URL...\nPlease check that Your URL starts with >> https://youtube.com/playlist?list=".title()
+                    )
                     input("Press Enter to Continue...")
 
             else:
 
-                print(
-                    "Invalid URL...\nPlease check that Your URL starts with >> https://youtube.com/playlist?list=".title()
-                )
-                input("Press Enter to Continue...")
+                raise ValueError("URL cannot be empty.")
 
-        else:
+        except ValueError as ve:
+            print(f"ValueError: {ve}")
+            input("Press Enter to Continue...")
 
-            raise ValueError("URL cannot be empty.")
-
-    except ValueError as ve:
-        print(f"ValueError: {ve}")
-        input("Press Enter to Continue...")
-
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        input("Press Enter to Continue...")
-
-
-if __name__ == "__main__":
-    main()
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            input("Press Enter to Continue...")

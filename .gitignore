@@ -4,3 +4,5 @@ __pycache__/
 
 # Ignore Visual Studio Code settings
 *.vscode/
+
+test.txt

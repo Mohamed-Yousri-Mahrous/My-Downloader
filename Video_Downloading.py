@@ -33,12 +33,12 @@ class Video:
             }
 
             with yt_dlp.YoutubeDL(url_option) as youtube_Video:
-                self.video_info = youtube_Video.extract_info(url, download=False)
+                video_info = youtube_Video.extract_info(url, download=False)
 
             # Display the playlist information in the Terminal
-            video_title = self.video_info["title"]
-            Youtube_channel = self.video_info["channel"]
-            video_duration = self.video_info["duration"]
+            video_title = video_info["title"]
+            Youtube_channel = video_info["channel"]
+            video_duration = video_info["duration"]
             video_duration = self.convert_duration(video_duration)
 
             print(
@@ -57,7 +57,7 @@ class Video:
                 f" Now downloading the Video ... ".center(80, "=").title(), end="\n\n"
             )
 
-            return self.video_info
+            return video_info
 
         except KeyError as ke:
             print(f"KeyError: {ke}")
@@ -67,8 +67,8 @@ class Video:
             print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
 
-    def download_video(self):
-        if not self.video_info:
+    def download_video(self, video_info):
+        if not video_info:
             print("No video information available. Cannot download.")
             input("Press Enter to Continue...")
             return
@@ -83,10 +83,10 @@ class Video:
                 "no_warnings": True,
             }
 
-            print(f"Downloading {self.video_info['title']} ...", end="\n\n")
+            print(f"Downloading {video_info['title']} ...", end="\n\n")
 
             with yt_dlp.YoutubeDL(video_option) as video_download:
-                video_download.download([self.video_info["webpage_url"]])
+                video_download.download([video_info["webpage_url"]])
 
             print(" Video downloaded successfully ".center(80, "="), end="\n\n")
             input("Press Enter to Continue...")
@@ -111,7 +111,7 @@ class Video:
 
             print(" Loading ... ".center(80, "=").title(), end="\n\n")
 
-            info = self.get_info(self.video_url)
+            info = self.get_info(video_url)
 
             if info:
                 self.download_video(info)
@@ -123,7 +123,3 @@ class Video:
         except Exception as e:
             print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
-
-
-if __name__ == "__main__":
-    Video().main()
