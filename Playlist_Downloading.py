@@ -65,7 +65,7 @@ class Playlist:
                 video["playlist_index"] = index
 
             with open("playlist_info.json", "w") as f:
-                json.dumps(videos, f, indent=4)
+                json.dump(videos, f)
 
             return videos
 
@@ -86,20 +86,30 @@ class Playlist:
 
                 try:
 
-                    file_name = f"{video['playlist_index']} - {video['title']}.mp4"
+                    if (
+                        video["title"] == "[Private video]"
+                        or video["title"] == "[Deleted video]"
+                    ):
+                        print(
+                            f"- Downloading video {index} is skipped As it is {video['title']} ".title(),
+                            end="\n\n",
+                        )
+                    else:
 
-                    print(
-                        f"- Downloading video {index} of {len(videos)} - {video['title']} ".title(),
-                        end="\n\n",
-                    )
+                        file_name = f"{video['playlist_index']} - {video['title']}.mp4"
 
-                    video_option = {
-                        **playlist_option,
-                        "outtmpl": file_name,
-                    }
+                        print(
+                            f"- Downloading video {index} of {len(videos)} - {video['title']} ".title(),
+                            end="\n\n",
+                        )
 
-                    with yt_dlp.YoutubeDL(video_option) as video_download:
-                        video_download.download([video["url"]])
+                        video_option = {
+                            **playlist_option,
+                            "outtmpl": file_name,
+                        }
+
+                        with yt_dlp.YoutubeDL(video_option) as video_download:
+                            video_download.download([video["url"]])
 
                 except Exception as e:
                     print(f"An error occurred: {e}")

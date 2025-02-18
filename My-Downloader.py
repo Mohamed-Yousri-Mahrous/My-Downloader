@@ -6,6 +6,7 @@ from Playlist_Downloading import Playlist
 class My_Downloader:
     def welcome(self):
         os.system("cls" if os.name == "nt" else "clear")
+        os.system("mode con: cols=80")
         print("=" * 80)
         print(" Welcome to My Downloader Program ".center(80, "="))
         print(" Created by : Mohamed Yousri ".center(80, "="))
