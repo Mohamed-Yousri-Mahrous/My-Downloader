@@ -1,6 +1,6 @@
 import os
 import yt_dlp
-import re
+import re, json
 
 
 class Playlist:
@@ -64,6 +64,9 @@ class Playlist:
             for index, video in enumerate(videos, start=1):
                 video["playlist_index"] = index
 
+            with open("playlist_info.json", "w") as f:
+                json.dumps(videos, f, indent=4)
+
             return videos
 
         except Exception as e:
@@ -100,12 +103,6 @@ class Playlist:
 
                 except Exception as e:
                     print(f"An error occurred: {e}")
-                    print(
-                        f" retrying to download video {index} of {len(videos)} - {video['title']} again ".center(
-                            80, "="
-                        ).title(),
-                        end="\n\n",
-                    )
 
             print(
                 " All videos in the playlist have been downloaded successfully ".center(
