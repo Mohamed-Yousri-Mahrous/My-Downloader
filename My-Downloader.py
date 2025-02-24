@@ -1,109 +1,107 @@
-import os, subprocess
+import os
+import subprocess
+import requests
 from Video_Downloading import Video
 from Playlist_Downloading import Playlist
-
-# TODO: STUDY MORE ABOUT IMPORTLIB.METADATA
 from importlib.metadata import version
-import requests
+
+# TODO: STUDY MORE ABOUT IMPORTLIB.METADATA and requests
 
 
-class My_Downloader:
+class MyDownloader:
     def __init__(self):
         self.packages = ["yt_dlp"]
         self.width = 80
 
-    def welcome(self):
+    def clear_screen(self):
         os.system("cls" if os.name == "nt" else "clear")
-        os.system("mode con: cols=self.width")
+
+    def welcome(self):
+        self.clear_screen()
         print("=" * self.width)
         print(" Welcome to My Downloader Program ".center(self.width, "="))
         print(" Created by : Mohamed Yousri ".center(self.width, "="))
         print("=" * self.width)
 
+    # TODO
     def get_latest_version(self, package_name):
         url = f"https://pypi.org/pypi/{package_name}/json"
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            return data["info"]["version"]
-        else:
+        try:
+            response = requests.get(url, timeout=5)
+            response.raise_for_status()
+            return response.json()["info"]["version"]
+        except requests.RequestException:
             return None
 
     def check_requirements(self):
+        self.clear_screen()
+        print(" Checking Requirements ... ".center(self.width, "="))
+
+        for package in self.packages:
+            try:
+                installed_version = version(package)
+                latest_version = self.get_latest_version(package)
+                print(f"- {package} is installed with version {installed_version}")
+
+                # TODO: STUDY MORE ABOUT THIS
+                if latest_version and latest_version != installed_version:
+                    print(f"- New version {latest_version} is available for {package}")
+                    self.install_package(package, upgrade=True)
+
+            except:
+                print(f"- Installing {package}...")
+                self.install_package(package)
+
+        input("Press Enter to continue...")
+
+    # TODO: STUDY MORE ABOUT THIS
+    @staticmethod
+    def install_package(package, upgrade=False):
         try:
-            os.system("cls" if os.name == "nt" else "clear")
-            print(" Checking Requirements ... ".center(self.width, "="))
+            command = ["pip", "install"]
+            if upgrade:
+                command.append("--upgrade")
+            command.append(package)
+            subprocess.run(command, shell=True, check=True, text=True)
+            print(f"- {package} has been installed successfully!")
+        except subprocess.CalledProcessError:
+            print(f" Failed to install {package}.")
 
-            for package in self.packages:
-
-                try:
-                    latest_version = self.get_latest_version(package)
-                    package_version = version(package)
-                    print(f"- {package} is installed with version {package_version}")
-
-                    if latest_version != package_version:
-                        print(
-                            f"- New version {latest_version} is available for {package}"
-                        )
-                        print(f"Updating {package}...")
-                        subprocess.run(
-                            ["pip", "install", "--upgrade", f"{package}"],
-                            shell=True,
-                            text=True,
-                            check=True,
-                        )
-                        print(f"- {package} has been updated successfully!")
-
-                except:
-                    print(f"- Installing {package}...", end="\n\n")
-                    subprocess.run(
-                        ["pip", "install", f"{package}"],
-                        shell=True,
-                        text=True,
-                        check=True,
-                    )
-
-        except Exception as e:
-            print(f"⚠️ An error occurred: {e}")
-
-        input("Press Enter to Continue...")
-
-    def exit(self):
+    def exit_program(self):
         print("Goodbye!")
         os._exit(0)
 
     def main(self):
+        actions = {
+            "1": Video().main,
+            "2": Playlist().main,
+            "3": self.exit_program,
+        }
 
         while True:
             try:
                 self.welcome()
-                actions = {
-                    "1": Video().main,
-                    "2": Playlist().main,
-                    "3": self.exit,
-                }
-                print(
-                    "[1] Download a Video".center(25),
-                    "[2] Download a Playlist".center(25),
-                    "[3] Exit".center(25),
-                )
+                print("[1] Download a Video".center(25), end="")
+                print("[2] Download a Playlist".center(25), end="")
+                print("[3] Exit".center(25))
                 print("=" * self.width)
-                action = input("Please Choose an Option: ").strip()
 
-                if action in actions:
-                    actions[action]()
-                else:
-                    print("Invalid Option!")
-                    input("Press Enter to Continue...")
+                choice = input("Please Choose an Option: ").strip()
+                actions.get(choice, self.invalid_option)()
 
             except KeyboardInterrupt:
-                self.exit()
+                self.exit_program()
 
             except Exception as e:
                 print(f"An Error Occurred: {e}")
                 input("Press Enter to Continue...")
 
+    def invalid_option(self):
+        print("Invalid Option! Please try again.")
+        input("Press Enter to continue...")
+
 
 if __name__ == "__main__":
-    My_Downloader().check_requirements()
-    # My_Downloader().main()
+    downloader = MyDownloader()
+    downloader.check_requirements()
+    downloader.main()
