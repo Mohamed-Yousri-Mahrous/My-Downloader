@@ -27,6 +27,7 @@ TODO : My-Downloader
 [ ] ->
 
 
+
 TODO : Errors
 [ ] 
 [download] Got error: (<urllib3.connection.HTTPSConnection object at 0x000002374E4274A0>, 'Connection to rr3---sn-uxaxjvhxbt2u-j5pe7.googlevideo.com timed out. (connect timeout=20.0)')
@@ -39,4 +40,3 @@ ERROR: [youtube] h4wIj97XtIk: Failed to extract any player response; please repo
 An error occurred: ERROR: [youtube] h4wIj97XtIk: Failed to extract any player response; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
 [ ]
 
-[ ]

@@ -123,3 +123,7 @@ class Video:
         except Exception as e:
             print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
+
+
+if __name__ == "__main__":
+    Video().main()
