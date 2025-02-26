@@ -10,7 +10,6 @@ from importlib.metadata import version
 
 class MyDownloader:
     def __init__(self):
-        self.packages = ["yt_dlp"]
         self.width = 80
 
     def clear_screen(self):
@@ -18,12 +17,15 @@ class MyDownloader:
 
     def welcome(self):
         self.clear_screen()
-        print("=" * self.width)
-        print(" Welcome to My Downloader Program ".center(self.width, "="))
-        print(" Created by : Mohamed Yousri ".center(self.width, "="))
-        print("=" * self.width)
+        border = "=" * self.width
+        messages = [
+            border,
+            " Welcome to My Downloader Program ".center(self.width, "="),
+            " Created by : Mohamed Yousri ".center(self.width, "="),
+            border,
+        ]
+        print("\n".join(messages))
 
-    # TODO
     def get_latest_version(self, package_name):
         url = f"https://pypi.org/pypi/{package_name}/json"
         try:
@@ -33,28 +35,57 @@ class MyDownloader:
         except requests.RequestException:
             return None
 
+    @staticmethod
+    def read_requirement():
+        try:
+            with open("requirements.txt", "r") as file:
+                packages = [
+                    line.strip()
+                    for line in file
+                    if line.strip() and not line.startswith("#")
+                ]
+            return packages
+        except FileNotFoundError:
+            print("requirements.txt file not found!")
+            input("Press Enter to exit...")
+            os._exit(1)
+
     def check_requirements(self):
+        """Check and update package requirements from requirements.txt"""
         self.clear_screen()
         print(" Checking Requirements ... ".center(self.width, "="))
 
-        for package in self.packages:
+        packages = self.read_requirement()
+        if not packages:
+            print("No valid packages found in requirements.txt")
+            self.exit_program()
+
+        for package in packages:
             try:
                 installed_version = version(package)
+                print(
+                    f"\n- {package} is installed with version {installed_version}",
+                    end="",
+                )
+
                 latest_version = self.get_latest_version(package)
-                print(f"- {package} is installed with version {installed_version}")
+                if not latest_version:
+                    print(f"\n- Error: Could not fetch latest version for {package}")
+                    self.exit_program()
 
-                # TODO: STUDY MORE ABOUT THIS
-                if latest_version and latest_version != installed_version:
-                    print(f"- New version {latest_version} is available for {package}")
-                    self.install_package(package, upgrade=True)
+                if latest_version != installed_version:
+                    print(
+                        f"-\n New version {latest_version} is available for {package}"
+                    )
+                    if not self.install_package(package, upgrade=True):
+                        self.exit_program()
+                else:
+                    print(f", its up to date")
 
-            except:
-                print(f"- Installing {package}...")
-                self.install_package(package)
+            except Exception as e:
+                print(f"\n- Error installing {package}: {str(e)}")
+                self.exit_program()
 
-        input("Press Enter to continue...")
-
-    # TODO: STUDY MORE ABOUT THIS
     @staticmethod
     def install_package(package, upgrade=False):
         try:
@@ -64,11 +95,14 @@ class MyDownloader:
             command.append(package)
             subprocess.run(command, shell=True, check=True, text=True)
             print(f"- {package} has been installed successfully!")
+            return True
         except subprocess.CalledProcessError:
-            print(f" Failed to install {package}.")
+            print(f"Failed to install {package}.")
+            input("Press Enter to exit...")
+            return False
 
     def exit_program(self):
-        print("Goodbye!")
+        print(" Goodbye! ".center(self.width, "="))
         os._exit(0)
 
     def main(self):
@@ -81,9 +115,12 @@ class MyDownloader:
         while True:
             try:
                 self.welcome()
-                print("[1] Download a Video".center(25), end="")
-                print("[2] Download a Playlist".center(25), end="")
-                print("[3] Exit".center(25))
+                menu_items = [
+                    "[1] Download a Video".center(25),
+                    "[2] Download a Playlist".center(25),
+                    "[3] Exit".center(25),
+                ]
+                print("".join(menu_items))
                 print("=" * self.width)
 
                 choice = input("Please Choose an Option: ").strip()
