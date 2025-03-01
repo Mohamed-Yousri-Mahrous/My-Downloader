@@ -4,4 +4,4 @@ __pycache__/
 
 # Ignore Visual Studio Code settings
 *.vscode/
-test.py
+My_Downloader.log
