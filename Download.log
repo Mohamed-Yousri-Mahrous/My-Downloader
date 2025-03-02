@@ -1,0 +1,171 @@
+2025-03-02 22:34:31,560 - INFO - Starting requirements check
+2025-03-02 22:34:31,596 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:34:31,596 - INFO - start Checking latest version for package: requests
+2025-03-02 22:34:31,829 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:34:31,829 - INFO - Package requests is up to date
+2025-03-02 22:34:31,829 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:34:31,829 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:34:32,288 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:34:32,288 - INFO - Package yt_dlp is up to date
+2025-03-02 22:34:32,288 - INFO - ============================= New session started ==============================
+2025-03-02 22:34:32,288 - INFO - Displaying Welcome Screen
+2025-03-02 22:34:34,160 - INFO - User selected option: 1
+2025-03-02 22:34:34,160 - INFO - Starting Video Download
+2025-03-02 22:34:34,160 - ERROR - An error occurred: name 'clear_screen' is not defined
+2025-03-02 22:35:06,134 - INFO - Displaying Welcome Screen
+2025-03-02 22:35:09,052 - INFO - User selected option: 3
+2025-03-02 22:35:09,053 - INFO - Exiting program
+2025-03-02 22:35:11,548 - INFO - Starting requirements check
+2025-03-02 22:35:11,584 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:35:11,584 - INFO - start Checking latest version for package: requests
+2025-03-02 22:35:11,635 - ERROR - Failed to get latest version for requests: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/requests/json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2025-03-02 22:35:11,635 - ERROR - Could not fetch latest version for requests
+2025-03-02 22:35:11,636 - INFO - Exiting program
+2025-03-02 22:43:55,249 - INFO - Starting requirements check
+2025-03-02 22:43:55,249 - INFO - ============================= New session started ==============================
+2025-03-02 22:43:55,283 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:43:55,284 - INFO - start Checking latest version for package: requests
+2025-03-02 22:43:55,543 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:43:55,543 - INFO - Package requests is up to date
+2025-03-02 22:43:55,554 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:43:55,554 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:43:55,970 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:43:55,970 - INFO - Package yt_dlp is up to date
+2025-03-02 22:43:55,970 - INFO - Displaying Welcome Screen
+2025-03-02 22:46:33,885 - INFO - User selected option: 3
+2025-03-02 22:46:33,885 - INFO - Exiting program
+2025-03-02 22:46:36,653 - INFO - Starting requirements check
+2025-03-02 22:46:36,653 - INFO - ============================= New session started ==============================
+2025-03-02 22:46:36,687 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:46:36,687 - INFO - start Checking latest version for package: requests
+2025-03-02 22:46:36,928 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:46:36,928 - INFO - Package requests is up to date
+2025-03-02 22:46:36,938 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:46:36,938 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:46:37,382 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:46:37,382 - INFO - Package yt_dlp is up to date
+2025-03-02 22:46:37,382 - INFO - Displaying Welcome Screen
+2025-03-02 22:47:58,287 - INFO - User selected option: 3
+2025-03-02 22:47:58,287 - INFO - Exiting program
+2025-03-02 22:48:00,907 - INFO - Starting requirements check
+2025-03-02 22:48:00,907 - INFO - ============================= New session started ==============================
+2025-03-02 22:48:00,943 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:48:00,944 - INFO - start Checking latest version for package: requests
+2025-03-02 22:48:01,190 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:48:01,190 - INFO - Package requests is up to date
+2025-03-02 22:48:01,190 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:48:01,206 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:48:01,578 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:48:01,578 - INFO - Package yt_dlp is up to date
+2025-03-02 22:48:01,579 - ERROR - An error occurred: type object 'Video' has no attribute 'welcome'
+2025-03-02 22:48:19,404 - ERROR - An error occurred: type object 'Video' has no attribute 'welcome'
+2025-03-02 22:48:24,507 - ERROR - An error occurred: type object 'Video' has no attribute 'welcome'
+2025-03-02 22:48:33,166 - INFO - Starting requirements check
+2025-03-02 22:48:33,166 - INFO - ============================= New session started ==============================
+2025-03-02 22:48:33,202 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:48:33,202 - INFO - start Checking latest version for package: requests
+2025-03-02 22:48:33,458 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:48:33,458 - INFO - Package requests is up to date
+2025-03-02 22:48:33,458 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:48:33,458 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:48:33,839 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:48:33,839 - INFO - Package yt_dlp is up to date
+2025-03-02 22:48:33,839 - ERROR - An error occurred: Video.welcome() missing 1 required positional argument: 'program_name'
+2025-03-02 22:49:51,038 - ERROR - An error occurred: Video.welcome() missing 1 required positional argument: 'program_name'
+2025-03-02 22:49:57,080 - INFO - Starting requirements check
+2025-03-02 22:49:57,080 - INFO - ============================= New session started ==============================
+2025-03-02 22:49:57,096 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:49:57,096 - INFO - start Checking latest version for package: requests
+2025-03-02 22:49:57,373 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:49:57,373 - INFO - Package requests is up to date
+2025-03-02 22:49:57,389 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:49:57,389 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:49:57,789 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:49:57,789 - INFO - Package yt_dlp is up to date
+2025-03-02 22:49:57,789 - ERROR - An error occurred: Video.welcome() missing 1 required positional argument: 'program_name'
+2025-03-02 22:52:27,006 - INFO - Starting requirements check
+2025-03-02 22:52:27,006 - INFO - ============================= New session started ==============================
+2025-03-02 22:52:27,023 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:52:27,023 - INFO - start Checking latest version for package: requests
+2025-03-02 22:52:27,281 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:52:27,281 - INFO - Package requests is up to date
+2025-03-02 22:52:27,297 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:52:27,297 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:52:27,675 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:52:27,675 - INFO - Package yt_dlp is up to date
+2025-03-02 22:52:30,593 - INFO - User selected option: 1
+2025-03-02 22:52:30,593 - ERROR - An error occurred: 'Video' object has no attribute 'Welcome'
+2025-03-02 22:53:22,245 - INFO - Starting requirements check
+2025-03-02 22:53:22,245 - INFO - ============================= New session started ==============================
+2025-03-02 22:53:22,265 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:53:22,265 - INFO - start Checking latest version for package: requests
+2025-03-02 22:53:22,538 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:53:22,538 - INFO - Package requests is up to date
+2025-03-02 22:53:22,549 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:53:22,549 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:53:22,956 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:53:22,956 - INFO - Package yt_dlp is up to date
+2025-03-02 22:53:24,601 - INFO - User selected option: 1
+2025-03-02 22:53:24,601 - ERROR - An error occurred: name 'self' is not defined
+2025-03-02 22:53:57,730 - INFO - Starting requirements check
+2025-03-02 22:53:57,730 - INFO - ============================= New session started ==============================
+2025-03-02 22:53:57,763 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:53:57,763 - INFO - start Checking latest version for package: requests
+2025-03-02 22:53:58,049 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:53:58,049 - INFO - Package requests is up to date
+2025-03-02 22:53:58,049 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:53:58,049 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:53:58,425 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:53:58,425 - INFO - Package yt_dlp is up to date
+2025-03-02 22:54:00,094 - INFO - User selected option: 1
+2025-03-02 22:54:00,094 - INFO - Starting Video Download
+2025-03-02 22:54:10,803 - INFO - Program interrupted by user
+2025-03-02 22:54:10,803 - INFO - Exiting program
+2025-03-02 22:55:00,157 - INFO - Starting requirements check
+2025-03-02 22:55:00,157 - INFO - ============================= New session started ==============================
+2025-03-02 22:55:00,190 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:55:00,190 - INFO - start Checking latest version for package: requests
+2025-03-02 22:55:00,445 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:55:00,445 - INFO - Package requests is up to date
+2025-03-02 22:55:00,466 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:55:00,466 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:55:00,862 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:55:00,862 - INFO - Package yt_dlp is up to date
+2025-03-02 22:55:00,862 - INFO - Starting Video Download
+2025-03-02 22:55:11,435 - INFO - User selected option: 3
+2025-03-02 22:55:11,435 - INFO - Exiting program
+2025-03-02 22:56:16,408 - INFO - Starting requirements check
+2025-03-02 22:56:16,408 - INFO - ============================= New session started ==============================
+2025-03-02 22:56:16,433 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:56:16,433 - INFO - start Checking latest version for package: requests
+2025-03-02 22:56:16,692 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:56:16,692 - INFO - Package requests is up to date
+2025-03-02 22:56:16,706 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:56:16,707 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:56:17,223 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:56:17,223 - INFO - Package yt_dlp is up to date
+2025-03-02 22:56:17,223 - ERROR - An error occurred: name 'self' is not defined
+2025-03-02 22:57:37,550 - INFO - Starting requirements check
+2025-03-02 22:57:37,550 - INFO - ============================= New session started ==============================
+2025-03-02 22:57:37,570 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:57:37,570 - INFO - start Checking latest version for package: requests
+2025-03-02 22:57:37,875 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:57:37,876 - INFO - Package requests is up to date
+2025-03-02 22:57:37,884 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:57:37,885 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:57:38,275 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:57:38,285 - INFO - Package yt_dlp is up to date
+2025-03-02 22:57:38,285 - ERROR - An error occurred: 'MyDownloader' object has no attribute 'Video'
+2025-03-02 22:58:40,640 - INFO - Starting requirements check
+2025-03-02 22:58:40,640 - INFO - ============================= New session started ==============================
+2025-03-02 22:58:40,660 - INFO - Package requests installed version: 2.32.3
+2025-03-02 22:58:40,660 - INFO - start Checking latest version for package: requests
+2025-03-02 22:58:40,924 - INFO - Latest version for requests: 2.32.3
+2025-03-02 22:58:40,924 - INFO - Package requests is up to date
+2025-03-02 22:58:40,934 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-02 22:58:40,934 - INFO - start Checking latest version for package: yt_dlp
+2025-03-02 22:58:41,343 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-02 22:58:41,343 - INFO - Package yt_dlp is up to date
+2025-03-02 22:58:41,343 - INFO - Starting Video Download
+2025-03-02 22:58:46,405 - INFO - User selected option: 1
+2025-03-02 22:58:46,405 - INFO - Starting Video Download

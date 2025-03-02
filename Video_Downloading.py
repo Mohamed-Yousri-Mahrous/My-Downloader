@@ -6,24 +6,33 @@ import logging
 class Video:
     def __init__(self):
         self.download_path = os.path.expanduser(r"~\Downloads")
+        self.width = 80
         self.logger = self.get_logger()
-
-    def Welcome(self):
+    
+    @staticmethod
+    def clear_screen():
         os.system("cls" if os.name == "nt" else "clear")
-        print("=" * 80)
-        print(" Welcome to the Video Downloading program ".center(80, "=").title())
-        print(" Created By Mohamed Yousri ".center(80, "=").title())
-        print("=" * 80, end="\n\n")
-        self.logger.info("Application started")
-
-    def get_logger(self):
+    
+    def welcome(self, program_name):
+        self.logger.info("Starting Video Download")
+        self.clear_screen()
+        border = '=' * self.width
+        message = [
+            border,
+            f" Welcome to the {program_name} program ".center(self.width, "="),
+            " Created By Mohamed Yousri ".center(self.width, "="),
+            border]
+        print("\n".join(message))
+    
+    @staticmethod
+    def get_logger():
         logger = logging.getLogger("Mohamed")
         logger.setLevel(logging.INFO)
 
         if not logger.hasHandlers():
             handlers = [
                 (logging.StreamHandler(), logging.WARNING),
-                (logging.FileHandler("My_Downloader.log"), logging.INFO),
+                (logging.FileHandler("Download.log"), logging.INFO),
             ]
             formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
@@ -130,7 +139,7 @@ class Video:
             input("Press Enter to Continue...")
 
     def main(self):
-        self.Welcome()
+        self.welcome("Video Downloading")
 
         try:
             video_url = input("Enter the URL of the Video >> ").strip()
