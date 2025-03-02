@@ -116,7 +116,7 @@ class MyDownloader(Video):
             "2": Playlist().main,
             "3": self.exit_program,
         }
-        
+
         while True:
             try:
                 Video.welcome(self, "My Downloader")

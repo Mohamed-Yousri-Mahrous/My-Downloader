@@ -8,22 +8,23 @@ class Video:
         self.download_path = os.path.expanduser(r"~\Downloads")
         self.width = 80
         self.logger = self.get_logger()
-    
+
     @staticmethod
     def clear_screen():
         os.system("cls" if os.name == "nt" else "clear")
-    
+
     def welcome(self, program_name):
         self.logger.info("Starting Video Download")
         self.clear_screen()
-        border = '=' * self.width
+        border = "=" * self.width
         message = [
             border,
             f" Welcome to the {program_name} program ".center(self.width, "="),
             " Created By Mohamed Yousri ".center(self.width, "="),
-            border]
+            border,
+        ]
         print("\n".join(message))
-    
+
     @staticmethod
     def get_logger():
         logger = logging.getLogger("Mohamed")
