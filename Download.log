@@ -169,3 +169,126 @@
 2025-03-02 22:58:41,343 - INFO - Starting Video Download
 2025-03-02 22:58:46,405 - INFO - User selected option: 1
 2025-03-02 22:58:46,405 - INFO - Starting Video Download
+2025-03-03 22:09:49,052 - INFO - Starting requirements check
+2025-03-03 22:09:49,073 - INFO - ============================= New session started ==============================
+2025-03-03 22:09:49,457 - INFO - Package requests installed version: 2.32.3
+2025-03-03 22:09:49,457 - INFO - Start checking latest version for package: requests
+2025-03-03 22:09:50,043 - INFO - Latest version for requests: 2.32.3
+2025-03-03 22:09:50,045 - INFO - Package requests is up to date
+2025-03-03 22:09:50,334 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-03 22:09:50,334 - INFO - Start checking latest version for package: yt_dlp
+2025-03-03 22:09:50,973 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-03 22:09:50,973 - INFO - Package yt_dlp is up to date
+2025-03-03 22:09:50,973 - INFO - Starting Video Download
+2025-03-03 22:10:13,456 - INFO - User selected option: 1
+2025-03-03 22:10:13,456 - INFO - Starting Video Download
+2025-03-03 22:10:16,157 - INFO - Program interrupted by user
+2025-03-03 22:10:16,157 - INFO - Exiting program
+2025-03-03 22:10:23,170 - INFO - Starting requirements check
+2025-03-03 22:10:23,170 - INFO - ============================= New session started ==============================
+2025-03-03 22:10:23,193 - INFO - Package requests installed version: 2.32.3
+2025-03-03 22:10:23,202 - INFO - Start checking latest version for package: requests
+2025-03-03 22:10:23,924 - INFO - Latest version for requests: 2.32.3
+2025-03-03 22:10:23,925 - INFO - Package requests is up to date
+2025-03-03 22:10:23,939 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-03 22:10:23,940 - INFO - Start checking latest version for package: yt_dlp
+2025-03-03 22:10:24,338 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-03 22:10:24,338 - INFO - Package yt_dlp is up to date
+2025-03-03 22:10:24,338 - INFO - Starting Video Download
+2025-03-03 22:10:28,914 - INFO - User selected option: 3
+2025-03-03 22:10:28,914 - INFO - Exiting program
+2025-03-03 22:10:34,432 - INFO - Starting requirements check
+2025-03-03 22:10:34,432 - INFO - ============================= New session started ==============================
+2025-03-03 22:10:34,451 - INFO - Package requests installed version: 2.32.3
+2025-03-03 22:10:34,451 - INFO - Start checking latest version for package: requests
+2025-03-03 22:10:34,734 - INFO - Latest version for requests: 2.32.3
+2025-03-03 22:10:34,734 - INFO - Package requests is up to date
+2025-03-03 22:10:34,754 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-03 22:10:34,760 - INFO - Start checking latest version for package: yt_dlp
+2025-03-03 22:10:35,141 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-03 22:10:35,141 - INFO - Package yt_dlp is up to date
+2025-03-03 22:10:35,141 - INFO - Starting Video Download
+2025-03-03 22:10:42,738 - INFO - User selected option: 3
+2025-03-03 22:10:42,738 - INFO - Exiting program
+2025-03-03 22:11:22,953 - INFO - Starting requirements check
+2025-03-03 22:11:22,953 - INFO - ============================= New session started ==============================
+2025-03-03 22:11:22,971 - INFO - Package requests installed version: 2.32.3
+2025-03-03 22:11:22,972 - INFO - Start checking latest version for package: requests
+2025-03-03 22:11:28,232 - INFO - Latest version for requests: 2.32.3
+2025-03-03 22:11:28,232 - INFO - Package requests is up to date
+2025-03-03 22:11:28,261 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-03 22:11:28,261 - INFO - Start checking latest version for package: yt_dlp
+2025-03-03 22:11:28,649 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-03 22:11:28,649 - INFO - Package yt_dlp is up to date
+2025-03-03 22:11:28,649 - INFO - Starting Video Download
+2025-03-03 22:11:31,018 - INFO - User selected option: 88
+2025-03-03 22:11:31,018 - WARNING - Invalid option selected
+2025-03-03 22:12:05,997 - INFO - Starting Video Download
+2025-03-03 22:12:10,669 - INFO - User selected option: 3
+2025-03-03 22:12:10,670 - INFO - Exiting program
+2025-03-03 22:12:14,058 - INFO - Starting requirements check
+2025-03-03 22:12:14,058 - INFO - ============================= New session started ==============================
+2025-03-03 22:12:14,073 - INFO - Package requests installed version: 2.32.3
+2025-03-03 22:12:14,078 - INFO - Start checking latest version for package: requests
+2025-03-03 22:12:14,327 - INFO - Latest version for requests: 2.32.3
+2025-03-03 22:12:14,327 - INFO - Package requests is up to date
+2025-03-03 22:12:14,353 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-03 22:12:14,353 - INFO - Start checking latest version for package: yt_dlp
+2025-03-03 22:12:14,725 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-03 22:12:15,049 - INFO - Package yt_dlp is up to date
+2025-03-03 22:12:15,050 - INFO - Starting Video Download
+2025-03-03 22:12:17,243 - INFO - User selected option: 4
+2025-03-03 22:12:17,243 - WARNING - Invalid option selected
+2025-03-03 22:12:23,589 - INFO - Starting Video Download
+2025-03-03 22:12:27,765 - INFO - User selected option: 8
+2025-03-03 22:12:27,765 - WARNING - Invalid option selected
+2025-03-03 22:12:28,691 - INFO - Starting Video Download
+2025-03-03 22:12:30,654 - INFO - User selected option: 3
+2025-03-03 22:12:30,654 - INFO - Exiting program
+2025-03-03 22:25:08,733 - INFO - Starting requirements check
+2025-03-03 22:25:08,733 - INFO - ============================= New session started ==============================
+2025-03-03 22:25:08,743 - INFO - Package requests installed version: 2.32.3
+2025-03-03 22:25:08,743 - INFO - Start checking latest version for package: requests
+2025-03-03 22:25:08,988 - INFO - Latest version for requests: 2.32.3
+2025-03-03 22:25:08,988 - INFO - Package requests is up to date
+2025-03-03 22:25:09,019 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-03 22:25:09,074 - INFO - Start checking latest version for package: yt_dlp
+2025-03-03 22:25:09,500 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-03 22:25:09,500 - INFO - Package yt_dlp is up to date
+2025-03-03 22:25:09,500 - INFO - Starting Video Download
+2025-03-03 22:25:11,559 - INFO - User selected option: 2
+2025-03-03 22:25:11,559 - ERROR - An error occurred: descriptor '__init__' of 'super' object needs an argument
+2025-03-03 22:25:38,034 - INFO - Starting Video Download
+2025-03-03 22:25:41,063 - INFO - User selected option: 3
+2025-03-03 22:25:41,063 - INFO - Exiting program
+2025-03-03 22:25:45,095 - INFO - Starting requirements check
+2025-03-03 22:25:45,096 - INFO - ============================= New session started ==============================
+2025-03-03 22:25:45,104 - INFO - Package requests installed version: 2.32.3
+2025-03-03 22:25:45,104 - INFO - Start checking latest version for package: requests
+2025-03-03 22:25:45,489 - INFO - Latest version for requests: 2.32.3
+2025-03-03 22:25:45,489 - INFO - Package requests is up to date
+2025-03-03 22:25:45,514 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-03 22:25:45,519 - INFO - Start checking latest version for package: yt_dlp
+2025-03-03 22:25:46,827 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-03 22:25:46,827 - INFO - Package yt_dlp is up to date
+2025-03-03 22:25:46,827 - INFO - Starting Video Download
+2025-03-03 22:25:48,851 - INFO - User selected option: 2
+2025-03-03 22:25:48,851 - INFO - Starting Video Download
+2025-03-03 22:40:19,262 - INFO - Program interrupted by user
+2025-03-03 22:40:19,272 - INFO - Exiting program
+2025-03-03 22:40:26,473 - INFO - Starting requirements check
+2025-03-03 22:40:26,473 - INFO - ============================= New session started ==============================
+2025-03-03 22:40:26,503 - INFO - Package requests installed version: 2.32.3
+2025-03-03 22:40:26,508 - INFO - Start checking latest version for package: requests
+2025-03-03 22:40:26,748 - INFO - Latest version for requests: 2.32.3
+2025-03-03 22:40:26,748 - INFO - Package requests is up to date
+2025-03-03 22:40:26,782 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-03 22:40:26,782 - INFO - Start checking latest version for package: yt_dlp
+2025-03-03 22:40:27,180 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-03 22:40:27,180 - INFO - Package yt_dlp is up to date
+2025-03-03 22:40:27,180 - INFO - Starting Video Download
+2025-03-03 22:40:29,558 - INFO - User selected option: 2
+2025-03-03 22:40:29,558 - INFO - Starting playlist downloader
+2025-03-03 22:40:29,558 - INFO - Starting Video Download
+2025-03-03 22:40:34,813 - INFO - Program interrupted by user
+2025-03-03 22:40:34,813 - INFO - Exiting program
