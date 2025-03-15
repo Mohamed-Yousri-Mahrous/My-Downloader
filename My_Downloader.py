@@ -6,9 +6,7 @@ import sys
 
 class MyDownloader(Video):
     def __init__(self):
-        super().__init__()  # Call parent class constructor
-        self.width = 80
-        self.logger = self.get_logger()  # Use instance method instead of class method
+        super().__init__()
         self.req_manager = RequirementsManager(self.logger)
 
     def check_requirements(self):

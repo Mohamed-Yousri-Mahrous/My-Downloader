@@ -1,294 +1,177 @@
-2025-03-02 22:34:31,560 - INFO - Starting requirements check
-2025-03-02 22:34:31,596 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:34:31,596 - INFO - start Checking latest version for package: requests
-2025-03-02 22:34:31,829 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:34:31,829 - INFO - Package requests is up to date
-2025-03-02 22:34:31,829 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:34:31,829 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:34:32,288 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:34:32,288 - INFO - Package yt_dlp is up to date
-2025-03-02 22:34:32,288 - INFO - ============================= New session started ==============================
-2025-03-02 22:34:32,288 - INFO - Displaying Welcome Screen
-2025-03-02 22:34:34,160 - INFO - User selected option: 1
-2025-03-02 22:34:34,160 - INFO - Starting Video Download
-2025-03-02 22:34:34,160 - ERROR - An error occurred: name 'clear_screen' is not defined
-2025-03-02 22:35:06,134 - INFO - Displaying Welcome Screen
-2025-03-02 22:35:09,052 - INFO - User selected option: 3
-2025-03-02 22:35:09,053 - INFO - Exiting program
-2025-03-02 22:35:11,548 - INFO - Starting requirements check
-2025-03-02 22:35:11,584 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:35:11,584 - INFO - start Checking latest version for package: requests
-2025-03-02 22:35:11,635 - ERROR - Failed to get latest version for requests: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/requests/json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
-2025-03-02 22:35:11,635 - ERROR - Could not fetch latest version for requests
-2025-03-02 22:35:11,636 - INFO - Exiting program
-2025-03-02 22:43:55,249 - INFO - Starting requirements check
-2025-03-02 22:43:55,249 - INFO - ============================= New session started ==============================
-2025-03-02 22:43:55,283 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:43:55,284 - INFO - start Checking latest version for package: requests
-2025-03-02 22:43:55,543 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:43:55,543 - INFO - Package requests is up to date
-2025-03-02 22:43:55,554 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:43:55,554 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:43:55,970 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:43:55,970 - INFO - Package yt_dlp is up to date
-2025-03-02 22:43:55,970 - INFO - Displaying Welcome Screen
-2025-03-02 22:46:33,885 - INFO - User selected option: 3
-2025-03-02 22:46:33,885 - INFO - Exiting program
-2025-03-02 22:46:36,653 - INFO - Starting requirements check
-2025-03-02 22:46:36,653 - INFO - ============================= New session started ==============================
-2025-03-02 22:46:36,687 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:46:36,687 - INFO - start Checking latest version for package: requests
-2025-03-02 22:46:36,928 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:46:36,928 - INFO - Package requests is up to date
-2025-03-02 22:46:36,938 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:46:36,938 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:46:37,382 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:46:37,382 - INFO - Package yt_dlp is up to date
-2025-03-02 22:46:37,382 - INFO - Displaying Welcome Screen
-2025-03-02 22:47:58,287 - INFO - User selected option: 3
-2025-03-02 22:47:58,287 - INFO - Exiting program
-2025-03-02 22:48:00,907 - INFO - Starting requirements check
-2025-03-02 22:48:00,907 - INFO - ============================= New session started ==============================
-2025-03-02 22:48:00,943 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:48:00,944 - INFO - start Checking latest version for package: requests
-2025-03-02 22:48:01,190 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:48:01,190 - INFO - Package requests is up to date
-2025-03-02 22:48:01,190 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:48:01,206 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:48:01,578 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:48:01,578 - INFO - Package yt_dlp is up to date
-2025-03-02 22:48:01,579 - ERROR - An error occurred: type object 'Video' has no attribute 'welcome'
-2025-03-02 22:48:19,404 - ERROR - An error occurred: type object 'Video' has no attribute 'welcome'
-2025-03-02 22:48:24,507 - ERROR - An error occurred: type object 'Video' has no attribute 'welcome'
-2025-03-02 22:48:33,166 - INFO - Starting requirements check
-2025-03-02 22:48:33,166 - INFO - ============================= New session started ==============================
-2025-03-02 22:48:33,202 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:48:33,202 - INFO - start Checking latest version for package: requests
-2025-03-02 22:48:33,458 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:48:33,458 - INFO - Package requests is up to date
-2025-03-02 22:48:33,458 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:48:33,458 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:48:33,839 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:48:33,839 - INFO - Package yt_dlp is up to date
-2025-03-02 22:48:33,839 - ERROR - An error occurred: Video.welcome() missing 1 required positional argument: 'program_name'
-2025-03-02 22:49:51,038 - ERROR - An error occurred: Video.welcome() missing 1 required positional argument: 'program_name'
-2025-03-02 22:49:57,080 - INFO - Starting requirements check
-2025-03-02 22:49:57,080 - INFO - ============================= New session started ==============================
-2025-03-02 22:49:57,096 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:49:57,096 - INFO - start Checking latest version for package: requests
-2025-03-02 22:49:57,373 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:49:57,373 - INFO - Package requests is up to date
-2025-03-02 22:49:57,389 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:49:57,389 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:49:57,789 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:49:57,789 - INFO - Package yt_dlp is up to date
-2025-03-02 22:49:57,789 - ERROR - An error occurred: Video.welcome() missing 1 required positional argument: 'program_name'
-2025-03-02 22:52:27,006 - INFO - Starting requirements check
-2025-03-02 22:52:27,006 - INFO - ============================= New session started ==============================
-2025-03-02 22:52:27,023 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:52:27,023 - INFO - start Checking latest version for package: requests
-2025-03-02 22:52:27,281 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:52:27,281 - INFO - Package requests is up to date
-2025-03-02 22:52:27,297 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:52:27,297 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:52:27,675 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:52:27,675 - INFO - Package yt_dlp is up to date
-2025-03-02 22:52:30,593 - INFO - User selected option: 1
-2025-03-02 22:52:30,593 - ERROR - An error occurred: 'Video' object has no attribute 'Welcome'
-2025-03-02 22:53:22,245 - INFO - Starting requirements check
-2025-03-02 22:53:22,245 - INFO - ============================= New session started ==============================
-2025-03-02 22:53:22,265 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:53:22,265 - INFO - start Checking latest version for package: requests
-2025-03-02 22:53:22,538 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:53:22,538 - INFO - Package requests is up to date
-2025-03-02 22:53:22,549 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:53:22,549 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:53:22,956 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:53:22,956 - INFO - Package yt_dlp is up to date
-2025-03-02 22:53:24,601 - INFO - User selected option: 1
-2025-03-02 22:53:24,601 - ERROR - An error occurred: name 'self' is not defined
-2025-03-02 22:53:57,730 - INFO - Starting requirements check
-2025-03-02 22:53:57,730 - INFO - ============================= New session started ==============================
-2025-03-02 22:53:57,763 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:53:57,763 - INFO - start Checking latest version for package: requests
-2025-03-02 22:53:58,049 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:53:58,049 - INFO - Package requests is up to date
-2025-03-02 22:53:58,049 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:53:58,049 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:53:58,425 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:53:58,425 - INFO - Package yt_dlp is up to date
-2025-03-02 22:54:00,094 - INFO - User selected option: 1
-2025-03-02 22:54:00,094 - INFO - Starting Video Download
-2025-03-02 22:54:10,803 - INFO - Program interrupted by user
-2025-03-02 22:54:10,803 - INFO - Exiting program
-2025-03-02 22:55:00,157 - INFO - Starting requirements check
-2025-03-02 22:55:00,157 - INFO - ============================= New session started ==============================
-2025-03-02 22:55:00,190 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:55:00,190 - INFO - start Checking latest version for package: requests
-2025-03-02 22:55:00,445 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:55:00,445 - INFO - Package requests is up to date
-2025-03-02 22:55:00,466 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:55:00,466 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:55:00,862 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:55:00,862 - INFO - Package yt_dlp is up to date
-2025-03-02 22:55:00,862 - INFO - Starting Video Download
-2025-03-02 22:55:11,435 - INFO - User selected option: 3
-2025-03-02 22:55:11,435 - INFO - Exiting program
-2025-03-02 22:56:16,408 - INFO - Starting requirements check
-2025-03-02 22:56:16,408 - INFO - ============================= New session started ==============================
-2025-03-02 22:56:16,433 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:56:16,433 - INFO - start Checking latest version for package: requests
-2025-03-02 22:56:16,692 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:56:16,692 - INFO - Package requests is up to date
-2025-03-02 22:56:16,706 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:56:16,707 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:56:17,223 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:56:17,223 - INFO - Package yt_dlp is up to date
-2025-03-02 22:56:17,223 - ERROR - An error occurred: name 'self' is not defined
-2025-03-02 22:57:37,550 - INFO - Starting requirements check
-2025-03-02 22:57:37,550 - INFO - ============================= New session started ==============================
-2025-03-02 22:57:37,570 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:57:37,570 - INFO - start Checking latest version for package: requests
-2025-03-02 22:57:37,875 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:57:37,876 - INFO - Package requests is up to date
-2025-03-02 22:57:37,884 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:57:37,885 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:57:38,275 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:57:38,285 - INFO - Package yt_dlp is up to date
-2025-03-02 22:57:38,285 - ERROR - An error occurred: 'MyDownloader' object has no attribute 'Video'
-2025-03-02 22:58:40,640 - INFO - Starting requirements check
-2025-03-02 22:58:40,640 - INFO - ============================= New session started ==============================
-2025-03-02 22:58:40,660 - INFO - Package requests installed version: 2.32.3
-2025-03-02 22:58:40,660 - INFO - start Checking latest version for package: requests
-2025-03-02 22:58:40,924 - INFO - Latest version for requests: 2.32.3
-2025-03-02 22:58:40,924 - INFO - Package requests is up to date
-2025-03-02 22:58:40,934 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-02 22:58:40,934 - INFO - start Checking latest version for package: yt_dlp
-2025-03-02 22:58:41,343 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-02 22:58:41,343 - INFO - Package yt_dlp is up to date
-2025-03-02 22:58:41,343 - INFO - Starting Video Download
-2025-03-02 22:58:46,405 - INFO - User selected option: 1
-2025-03-02 22:58:46,405 - INFO - Starting Video Download
-2025-03-03 22:09:49,052 - INFO - Starting requirements check
-2025-03-03 22:09:49,073 - INFO - ============================= New session started ==============================
-2025-03-03 22:09:49,457 - INFO - Package requests installed version: 2.32.3
-2025-03-03 22:09:49,457 - INFO - Start checking latest version for package: requests
-2025-03-03 22:09:50,043 - INFO - Latest version for requests: 2.32.3
-2025-03-03 22:09:50,045 - INFO - Package requests is up to date
-2025-03-03 22:09:50,334 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-03 22:09:50,334 - INFO - Start checking latest version for package: yt_dlp
-2025-03-03 22:09:50,973 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-03 22:09:50,973 - INFO - Package yt_dlp is up to date
-2025-03-03 22:09:50,973 - INFO - Starting Video Download
-2025-03-03 22:10:13,456 - INFO - User selected option: 1
-2025-03-03 22:10:13,456 - INFO - Starting Video Download
-2025-03-03 22:10:16,157 - INFO - Program interrupted by user
-2025-03-03 22:10:16,157 - INFO - Exiting program
-2025-03-03 22:10:23,170 - INFO - Starting requirements check
-2025-03-03 22:10:23,170 - INFO - ============================= New session started ==============================
-2025-03-03 22:10:23,193 - INFO - Package requests installed version: 2.32.3
-2025-03-03 22:10:23,202 - INFO - Start checking latest version for package: requests
-2025-03-03 22:10:23,924 - INFO - Latest version for requests: 2.32.3
-2025-03-03 22:10:23,925 - INFO - Package requests is up to date
-2025-03-03 22:10:23,939 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-03 22:10:23,940 - INFO - Start checking latest version for package: yt_dlp
-2025-03-03 22:10:24,338 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-03 22:10:24,338 - INFO - Package yt_dlp is up to date
-2025-03-03 22:10:24,338 - INFO - Starting Video Download
-2025-03-03 22:10:28,914 - INFO - User selected option: 3
-2025-03-03 22:10:28,914 - INFO - Exiting program
-2025-03-03 22:10:34,432 - INFO - Starting requirements check
-2025-03-03 22:10:34,432 - INFO - ============================= New session started ==============================
-2025-03-03 22:10:34,451 - INFO - Package requests installed version: 2.32.3
-2025-03-03 22:10:34,451 - INFO - Start checking latest version for package: requests
-2025-03-03 22:10:34,734 - INFO - Latest version for requests: 2.32.3
-2025-03-03 22:10:34,734 - INFO - Package requests is up to date
-2025-03-03 22:10:34,754 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-03 22:10:34,760 - INFO - Start checking latest version for package: yt_dlp
-2025-03-03 22:10:35,141 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-03 22:10:35,141 - INFO - Package yt_dlp is up to date
-2025-03-03 22:10:35,141 - INFO - Starting Video Download
-2025-03-03 22:10:42,738 - INFO - User selected option: 3
-2025-03-03 22:10:42,738 - INFO - Exiting program
-2025-03-03 22:11:22,953 - INFO - Starting requirements check
-2025-03-03 22:11:22,953 - INFO - ============================= New session started ==============================
-2025-03-03 22:11:22,971 - INFO - Package requests installed version: 2.32.3
-2025-03-03 22:11:22,972 - INFO - Start checking latest version for package: requests
-2025-03-03 22:11:28,232 - INFO - Latest version for requests: 2.32.3
-2025-03-03 22:11:28,232 - INFO - Package requests is up to date
-2025-03-03 22:11:28,261 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-03 22:11:28,261 - INFO - Start checking latest version for package: yt_dlp
-2025-03-03 22:11:28,649 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-03 22:11:28,649 - INFO - Package yt_dlp is up to date
-2025-03-03 22:11:28,649 - INFO - Starting Video Download
-2025-03-03 22:11:31,018 - INFO - User selected option: 88
-2025-03-03 22:11:31,018 - WARNING - Invalid option selected
-2025-03-03 22:12:05,997 - INFO - Starting Video Download
-2025-03-03 22:12:10,669 - INFO - User selected option: 3
-2025-03-03 22:12:10,670 - INFO - Exiting program
-2025-03-03 22:12:14,058 - INFO - Starting requirements check
-2025-03-03 22:12:14,058 - INFO - ============================= New session started ==============================
-2025-03-03 22:12:14,073 - INFO - Package requests installed version: 2.32.3
-2025-03-03 22:12:14,078 - INFO - Start checking latest version for package: requests
-2025-03-03 22:12:14,327 - INFO - Latest version for requests: 2.32.3
-2025-03-03 22:12:14,327 - INFO - Package requests is up to date
-2025-03-03 22:12:14,353 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-03 22:12:14,353 - INFO - Start checking latest version for package: yt_dlp
-2025-03-03 22:12:14,725 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-03 22:12:15,049 - INFO - Package yt_dlp is up to date
-2025-03-03 22:12:15,050 - INFO - Starting Video Download
-2025-03-03 22:12:17,243 - INFO - User selected option: 4
-2025-03-03 22:12:17,243 - WARNING - Invalid option selected
-2025-03-03 22:12:23,589 - INFO - Starting Video Download
-2025-03-03 22:12:27,765 - INFO - User selected option: 8
-2025-03-03 22:12:27,765 - WARNING - Invalid option selected
-2025-03-03 22:12:28,691 - INFO - Starting Video Download
-2025-03-03 22:12:30,654 - INFO - User selected option: 3
-2025-03-03 22:12:30,654 - INFO - Exiting program
-2025-03-03 22:25:08,733 - INFO - Starting requirements check
-2025-03-03 22:25:08,733 - INFO - ============================= New session started ==============================
-2025-03-03 22:25:08,743 - INFO - Package requests installed version: 2.32.3
-2025-03-03 22:25:08,743 - INFO - Start checking latest version for package: requests
-2025-03-03 22:25:08,988 - INFO - Latest version for requests: 2.32.3
-2025-03-03 22:25:08,988 - INFO - Package requests is up to date
-2025-03-03 22:25:09,019 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-03 22:25:09,074 - INFO - Start checking latest version for package: yt_dlp
-2025-03-03 22:25:09,500 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-03 22:25:09,500 - INFO - Package yt_dlp is up to date
-2025-03-03 22:25:09,500 - INFO - Starting Video Download
-2025-03-03 22:25:11,559 - INFO - User selected option: 2
-2025-03-03 22:25:11,559 - ERROR - An error occurred: descriptor '__init__' of 'super' object needs an argument
-2025-03-03 22:25:38,034 - INFO - Starting Video Download
-2025-03-03 22:25:41,063 - INFO - User selected option: 3
-2025-03-03 22:25:41,063 - INFO - Exiting program
-2025-03-03 22:25:45,095 - INFO - Starting requirements check
-2025-03-03 22:25:45,096 - INFO - ============================= New session started ==============================
-2025-03-03 22:25:45,104 - INFO - Package requests installed version: 2.32.3
-2025-03-03 22:25:45,104 - INFO - Start checking latest version for package: requests
-2025-03-03 22:25:45,489 - INFO - Latest version for requests: 2.32.3
-2025-03-03 22:25:45,489 - INFO - Package requests is up to date
-2025-03-03 22:25:45,514 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-03 22:25:45,519 - INFO - Start checking latest version for package: yt_dlp
-2025-03-03 22:25:46,827 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-03 22:25:46,827 - INFO - Package yt_dlp is up to date
-2025-03-03 22:25:46,827 - INFO - Starting Video Download
-2025-03-03 22:25:48,851 - INFO - User selected option: 2
-2025-03-03 22:25:48,851 - INFO - Starting Video Download
-2025-03-03 22:40:19,262 - INFO - Program interrupted by user
-2025-03-03 22:40:19,272 - INFO - Exiting program
-2025-03-03 22:40:26,473 - INFO - Starting requirements check
-2025-03-03 22:40:26,473 - INFO - ============================= New session started ==============================
-2025-03-03 22:40:26,503 - INFO - Package requests installed version: 2.32.3
-2025-03-03 22:40:26,508 - INFO - Start checking latest version for package: requests
-2025-03-03 22:40:26,748 - INFO - Latest version for requests: 2.32.3
-2025-03-03 22:40:26,748 - INFO - Package requests is up to date
-2025-03-03 22:40:26,782 - INFO - Package yt_dlp installed version: 2025.2.19
-2025-03-03 22:40:26,782 - INFO - Start checking latest version for package: yt_dlp
-2025-03-03 22:40:27,180 - INFO - Latest version for yt_dlp: 2025.2.19
-2025-03-03 22:40:27,180 - INFO - Package yt_dlp is up to date
-2025-03-03 22:40:27,180 - INFO - Starting Video Download
-2025-03-03 22:40:29,558 - INFO - User selected option: 2
-2025-03-03 22:40:29,558 - INFO - Starting playlist downloader
-2025-03-03 22:40:29,558 - INFO - Starting Video Download
-2025-03-03 22:40:34,813 - INFO - Program interrupted by user
-2025-03-03 22:40:34,813 - INFO - Exiting program
+2025-03-12 22:13:10,666 - INFO - Starting requirements check
+2025-03-12 22:13:10,716 - INFO - ============================= New session started ==============================
+2025-03-12 22:13:11,309 - INFO - Package requests installed version: 2.32.3
+2025-03-12 22:13:11,309 - INFO - Start checking latest version for package: requests
+2025-03-12 22:13:22,585 - ERROR - Failed to get latest version for requests: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/requests/json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025FA5FD26F0>: Failed to resolve 'pypi.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-12 22:13:22,586 - ERROR - Could not fetch latest version for requests
+2025-03-12 22:13:22,589 - INFO - Exiting program
+2025-03-12 22:15:43,016 - INFO - Starting requirements check
+2025-03-12 22:15:43,027 - INFO - ============================= New session started ==============================
+2025-03-12 22:15:43,067 - INFO - Package requests installed version: 2.32.3
+2025-03-12 22:15:43,068 - INFO - Start checking latest version for package: requests
+2025-03-12 22:15:44,512 - INFO - Latest version for requests: 2.32.3
+2025-03-12 22:15:44,514 - INFO - Package requests is up to date
+2025-03-12 22:15:44,999 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-12 22:15:45,000 - INFO - Start checking latest version for package: yt_dlp
+2025-03-12 22:15:45,453 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-12 22:15:45,454 - INFO - Package yt_dlp is up to date
+2025-03-12 22:15:45,454 - INFO - Starting Video Download
+2025-03-12 22:15:48,890 - INFO - User selected option: 2
+2025-03-12 22:15:48,890 - INFO - Starting playlist downloader
+2025-03-12 22:15:48,890 - INFO - Starting Video Download
+2025-03-12 22:16:00,577 - INFO - Processing URL: https://youtube.com/playlist?list=PLL5-Y6lgu7SJ1qj09HyD-WKMOoXtAKlz6&si=xh2IAYnCgQuOtDWg
+2025-03-12 22:16:00,578 - INFO - Getting playlist info for URL: https://youtube.com/playlist?list=PLL5-Y6lgu7SJ1qj09HyD-WKMOoXtAKlz6&si=xh2IAYnCgQuOtDWg
+2025-03-12 22:16:39,473 - INFO - Channel: One Way Production
+2025-03-12 22:16:39,473 - INFO - Video count: 30
+2025-03-12 22:16:39,485 - INFO - Changing directory to: C:\Users\Admin/Downloads
+2025-03-12 22:16:39,487 - INFO - Saving playlist info to JSON file
+2025-03-12 22:16:39,518 - INFO - Starting playlist download
+2025-03-12 22:26:51,283 - INFO - Starting requirements check
+2025-03-12 22:26:51,283 - INFO - ============================= New session started ==============================
+2025-03-12 22:26:51,299 - INFO - Package requests installed version: 2.32.3
+2025-03-12 22:26:51,299 - INFO - Start checking latest version for package: requests
+2025-03-12 22:26:51,736 - INFO - Latest version for requests: 2.32.3
+2025-03-12 22:26:51,736 - INFO - Package requests is up to date
+2025-03-12 22:26:51,751 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-12 22:26:51,751 - INFO - Start checking latest version for package: yt_dlp
+2025-03-12 22:26:52,423 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-12 22:26:52,423 - INFO - Package yt_dlp is up to date
+2025-03-12 22:26:52,423 - INFO - Starting Video Download
+2025-03-12 22:26:54,834 - INFO - User selected option: 2
+2025-03-12 22:26:54,834 - INFO - Starting playlist downloader
+2025-03-12 22:26:54,834 - INFO - Starting Video Download
+2025-03-12 22:26:57,116 - INFO - Processing URL: https://youtube.com/playlist?list=PLL5-Y6lgu7SLKovlSiD06tf7MKgRiI_Ft&si=-WH8HYTLfIZBXCIY
+2025-03-12 22:26:57,116 - INFO - Getting playlist info for URL: https://youtube.com/playlist?list=PLL5-Y6lgu7SLKovlSiD06tf7MKgRiI_Ft&si=-WH8HYTLfIZBXCIY
+2025-03-12 22:26:59,944 - INFO - Channel: One Way Production
+2025-03-12 22:26:59,944 - INFO - Video count: 6
+2025-03-12 22:26:59,944 - INFO - Changing directory to: C:\Users\Admin/Downloads
+2025-03-12 22:27:00,069 - INFO - Saving playlist info to JSON file
+2025-03-12 22:27:00,069 - INFO - Starting playlist download
+2025-03-12 22:36:16,428 - ERROR - Error downloading video 26: [0;31mERROR:[0m unable to download video data: HTTP Error 416: Requested range not satisfiable
+2025-03-12 22:38:59,270 - INFO - Playlist download completed successfully
+2025-03-12 22:41:22,937 - INFO - Playlist download completed successfully
+2025-03-12 23:02:19,481 - INFO - Starting Video Download
+2025-03-12 23:02:21,657 - INFO - User selected option: 3
+2025-03-12 23:02:21,658 - INFO - Exiting program
+2025-03-12 23:02:27,481 - INFO - Starting Video Download
+2025-03-12 23:02:29,969 - INFO - User selected option: 3
+2025-03-12 23:02:29,969 - INFO - Exiting program
+2025-03-13 15:29:35,287 - ERROR - Unexpected error: Video.welcome() missing 1 required positional argument: 'program_name'
+2025-03-13 15:30:01,501 - INFO - Starting Playlist Downloading
+2025-03-13 15:33:36,130 - INFO - Starting Playlist Downloading
+2025-03-13 15:33:38,617 - ERROR - Empty URL provided
+2025-03-13 15:33:38,617 - ERROR - ValueError: URL cannot be empty.
+2025-03-13 15:34:27,913 - INFO - Starting Playlist Downloading
+2025-03-13 15:34:29,186 - ERROR - [Error]- Empty URL provided
+2025-03-13 15:34:29,186 - ERROR - ValueError: URL cannot be empty.
+2025-03-13 15:35:59,205 - INFO - Starting Playlist Downloading
+2025-03-13 15:36:10,049 - ERROR - [Error]: Empty URL provided
+2025-03-13 15:36:10,049 - ERROR - ValueError: URL cannot be empty.
+2025-03-13 16:06:59,951 - INFO - Starting Playlist Downloading
+2025-03-13 16:07:22,257 - ERROR - [Error]: Empty URL provided
+2025-03-13 16:07:22,304 - ERROR - ValueError: URL cannot be empty.
+2025-03-13 16:07:27,395 - INFO - Starting Playlist Downloading
+2025-03-13 16:07:29,195 - ERROR - [Error]: Empty URL provided
+2025-03-13 16:07:29,195 - ERROR - ValueError: URL cannot be empty.
+2025-03-13 16:08:23,667 - INFO - Starting requirements check
+2025-03-13 16:08:23,667 - INFO - ============================= New session started ==============================
+2025-03-13 16:08:23,764 - INFO - Package requests installed version: 2.32.3
+2025-03-13 16:08:23,764 - INFO - Start checking latest version for package: requests
+2025-03-13 16:08:26,051 - INFO - Latest version for requests: 2.32.3
+2025-03-13 16:08:26,051 - INFO - Package requests is up to date
+2025-03-13 16:08:26,138 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-13 16:08:26,139 - INFO - Start checking latest version for package: yt_dlp
+2025-03-13 16:08:31,868 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-13 16:08:31,869 - INFO - Package yt_dlp is up to date
+2025-03-13 16:08:31,869 - INFO - Starting My Downloader
+2025-03-13 16:08:38,957 - INFO - User selected option: 3
+2025-03-13 16:08:38,957 - INFO - Exiting program
+2025-03-13 16:18:33,559 - INFO - Starting Playlist Downloading
+2025-03-13 16:18:36,254 - INFO - Processing URL: https://youtube.com/playlist?list=PL9J0c3ttbHD5N55mGUQk8YmMrS__alDCJ&si=w3Wnyb-RCQ6Luc7Q
+2025-03-13 16:18:36,255 - INFO - Getting playlist info for URL: https://youtube.com/playlist?list=PL9J0c3ttbHD5N55mGUQk8YmMrS__alDCJ&si=w3Wnyb-RCQ6Luc7Q
+2025-03-13 16:18:44,190 - INFO - - Total videos in the playlist: 55
+2025-03-13 16:18:44,191 - ERROR - Error getting playlist info: name 'downloads_path' is not defined
+2025-03-15 13:03:21,209 - INFO - Starting Playlist Downloading
+2025-03-15 13:19:28,889 - ERROR - Invalid URL format
+2025-03-15 19:59:37,776 - INFO - Starting Playlist Downloading
+2025-03-15 20:00:11,082 - INFO - You are downloading the playlist: اللذة الحقيقة
+
+2025-03-15 20:00:11,082 - INFO - From: Mohammad Elghaleez Channel on YouTube
+
+2025-03-15 20:00:11,082 - INFO - Total videos in the playlist: 2
+
+2025-03-15 20:00:11,120 - ERROR - Error getting playlist info: cannot access local variable 'playlist_title' where it is not associated with a value
+2025-03-15 20:02:02,531 - WARNING - No videos found in playlist
+2025-03-15 20:02:08,236 - INFO - Starting Playlist Downloading
+2025-03-15 20:02:12,789 - INFO - You are downloading the playlist: اللذة الحقيقة
+
+2025-03-15 20:02:12,789 - INFO - From (Mohammad Elghaleez) Channel on YouTube
+
+2025-03-15 20:02:12,789 - INFO - Total videos in the playlist: 2
+
+2025-03-15 20:02:12,789 - ERROR - Error getting playlist info: name 'playlist_title' is not defined
+2025-03-15 20:04:18,253 - WARNING - No videos found in playlist
+2025-03-15 20:04:23,337 - INFO - Starting Playlist Downloading
+2025-03-15 20:04:28,217 - INFO - You are downloading the playlist: اللذة الحقيقة
+
+2025-03-15 20:04:28,217 - INFO - From (Mohammad Elghaleez) Channel on YouTube
+
+2025-03-15 20:04:28,217 - INFO - Total videos in the playlist: 2
+
+2025-03-15 20:04:28,217 - INFO -  - The playlist will be Saved in the folder >> C:\Users\Admin\Desktop\My-Downloader
+
+
+2025-03-15 20:04:28,217 - INFO - Starting playlist download
+2025-03-15 20:04:28,217 - INFO - Downloading video 1/2: اللذة الحقيقية الجزء الثاني - محمد الغليظ
+2025-03-15 20:10:44,056 - INFO - Starting Playlist Downloading
+2025-03-15 20:10:55,196 - ERROR - Error getting playlist info: [0;31mERROR:[0m [youtube:tab] PLgqtKVxUxe2rTPg9aYPDpnPyASeZIfBdb: Unable to download API page: <urllib3.connection.HTTPSConnection object at 0x000001799D33C410>: Failed to resolve 'www.youtube.com' ([Errno 11001] getaddrinfo failed) (caused by TransportError("<urllib3.connection.HTTPSConnection object at 0x000001799D33C410>: Failed to resolve 'www.youtube.com' ([Errno 11001] getaddrinfo failed)"))
+2025-03-15 20:11:38,088 - WARNING - No videos found in playlist
+2025-03-15 20:11:49,287 - INFO - Starting Playlist Downloading
+2025-03-15 20:11:53,997 - INFO - You are downloading the playlist: اللذة الحقيقة
+
+2025-03-15 20:11:53,997 - INFO - From (Mohammad Elghaleez) Channel on YouTube
+
+2025-03-15 20:11:53,997 - INFO - Total videos in the playlist: 2
+
+2025-03-15 20:11:53,997 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Desktop\My-Downloader
+
+
+2025-03-15 20:11:53,997 - INFO - Starting playlist download
+2025-03-15 20:11:53,997 - INFO - Downloading video 1/2: اللذة الحقيقية الجزء الثاني - محمد الغليظ
+2025-03-15 20:13:46,573 - INFO - Starting Playlist Downloading
+2025-03-15 20:13:56,013 - INFO - You are downloading the playlist: اللذة الحقيقة
+
+2025-03-15 20:13:56,013 - INFO - From (Mohammad Elghaleez) Channel on YouTube
+
+2025-03-15 20:13:56,013 - INFO - Total videos in the playlist: 2
+
+2025-03-15 20:13:56,055 - ERROR - Error getting playlist info: [WinError 183] Cannot create a file when that file already exists: 'C:\\Users\\Admin\\Downloads\\اللذة الحقيقة'
+2025-03-15 20:14:30,404 - WARNING - No videos found in playlist
+2025-03-15 20:19:41,865 - INFO - Starting Playlist Downloading
+2025-03-15 20:19:54,388 - INFO - You are downloading the playlist: اللذة الحقيقة
+
+2025-03-15 20:19:54,388 - INFO - From (Mohammad Elghaleez) Channel on YouTube
+
+2025-03-15 20:19:54,388 - INFO - Total videos in the playlist: 2
+
+2025-03-15 20:19:54,404 - INFO - Current working directory: C:\Users\Admin\Downloads\اللذة الحقيقة
+2025-03-15 20:19:54,404 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Downloads\اللذة الحقيقة
+
+
+2025-03-15 20:19:54,424 - INFO - Starting playlist download
+2025-03-15 20:19:54,424 - INFO - Downloading video 1/2: اللذة الحقيقية الجزء الثاني - محمد الغليظ
+2025-03-15 20:20:12,404 - INFO - Downloading video 2/2: اللذة الحقيقية الجزء الأول - محمد الغليظ
+2025-03-15 21:24:30,975 - INFO - Starting Playlist Downloading
+2025-03-15 21:24:37,167 - INFO - You are downloading the playlist: اللذة الحقيقة
+
+2025-03-15 21:24:37,167 - INFO - From (Mohammad Elghaleez) Channel on YouTube
+
+2025-03-15 21:24:37,167 - INFO - Total videos in the playlist: 2
+
+2025-03-15 21:24:37,256 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Downloads\اللذة الحقيقة
+
+2025-03-15 21:24:37,261 - INFO - Downloading video 1/2: اللذة الحقيقية الجزء الثاني - محمد الغليظ
+2025-03-15 21:24:54,395 - INFO - Downloading video 2/2: اللذة الحقيقية الجزء الأول - محمد الغليظ
+2025-03-15 21:27:25,242 - ERROR - Error downloading video 2: [0;31mERROR:[0m 
+[download] Got error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-03-15 21:27:25,242 - INFO - Playlist download completed successfully

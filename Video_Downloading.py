@@ -1,11 +1,12 @@
 import os
 import yt_dlp
 import logging
+from pathlib import Path
 
 
 class Video:
     def __init__(self):
-        self.download_path = os.path.expanduser(r"~\Downloads")
+        self.download_path = Path.home() / "Downloads"
         self.width = 80
         self.logger = self.get_logger()
 
@@ -14,7 +15,7 @@ class Video:
         os.system("cls" if os.name == "nt" else "clear")
 
     def welcome(self, program_name):
-        self.logger.info("Starting Video Download")
+        self.logger.info(f"Starting {program_name}")
         self.clear_screen()
         border = "=" * self.width
         message = [
@@ -31,13 +32,18 @@ class Video:
         logger.setLevel(logging.INFO)
 
         if not logger.hasHandlers():
+            file_format = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+            console_format = logging.Formatter("[%(levelname)s] - %(message)s")
             handlers = [
-                (logging.StreamHandler(), logging.WARNING),
-                (logging.FileHandler("Download.log"), logging.INFO),
+                (logging.StreamHandler(), logging.INFO, console_format),
+                (
+                    logging.FileHandler("Download.log", encoding="utf-8"),
+                    logging.INFO,
+                    file_format,
+                ),
             ]
-            formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
-            for handler, level in handlers:
+            for handler, level, formatter in handlers:
                 handler.setLevel(level)
                 handler.setFormatter(formatter)
                 logger.addHandler(handler)
@@ -112,9 +118,7 @@ class Video:
         try:
             video_option = {
                 "format": "best",
-                "outtmpl": os.path.join(
-                    os.path.expanduser("~/Downloads"), "%(title)s.%(ext)s"
-                ),
+                "outtmpl": self.download_path / "%(title)s.%(ext)s",
                 "quiet": True,
                 "no_warnings": True,
             }
