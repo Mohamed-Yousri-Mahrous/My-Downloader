@@ -68,7 +68,7 @@ class Playlist(Video):
             for index, video in enumerate(videos, start=1):
                 try:
                     if video["title"] in self.INVALID_VIDEO_TITLES:
-                        self._handle_invalid_video(video, index)
+                        self.logger.warning(f"skipped video {index}-{video['title']}\n")
                         continue
 
                     self._download_single_video(video, index, total_videos)
@@ -82,13 +82,6 @@ class Playlist(Video):
         except Exception as e:
             self.logger.error(f"Error in playlist download: {str(e)}")
             input("Press Enter to Continue...")
-
-    def _handle_invalid_video(self, video, index):
-        self.logger.warning(f"Skipping {video['title']} at index {index}")
-        print(
-            f"- Downloading video {index} is skipped As it is {video['title']} ".title(),
-            end="\n\n",
-        )
 
     def _delete_partial_download(self, file_name):
         """Delete any existing partial download files"""
@@ -112,8 +105,6 @@ class Playlist(Video):
         with yt_dlp.YoutubeDL(video_option) as video_download:
             video_download.download([video["url"]])
 
-    def _show_completion_message(self):
-        self.logger.info("Playlist download completed successfully")
         print(
             " All videos in the playlist have been downloaded successfully ".center(
                 self.width, "="
