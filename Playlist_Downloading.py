@@ -64,9 +64,10 @@ class Playlist(Video):
     def playlist_process(self, videos):
         try:
             total_videos = len(videos)
-
+            file_name = f"{video['playlist_index']} - {video['title']}.mp4"
             for index, video in enumerate(videos, start=1):
                 try:
+
                     if video["title"] in self.INVALID_VIDEO_TITLES:
                         self.logger.warning(f"skipped video {index}-{video['title']}\n")
                         continue
@@ -76,8 +77,6 @@ class Playlist(Video):
                 except Exception as e:
                     self.logger.error(f"Error downloading video {index}: {str(e)}")
                     print(f"An error occurred: {e}")
-
-            self._show_completion_message()
 
         except Exception as e:
             self.logger.error(f"Error in playlist download: {str(e)}")
@@ -91,13 +90,12 @@ class Playlist(Video):
             part_file.unlink()
 
     def _download_single_video(self, video, index, total_videos):
-        file_name = f"{video['playlist_index']} - {video['title']}.mp4"
 
         # Delete any partial downloads before starting
         self._delete_partial_download(file_name)
 
         self.logger.info(
-            f"Downloading video {index}/{total_videos}: {video['title']}\n"
+            f"Downloading video {index} of {total_videos}: {video['title']}\n"
         )
 
         video_option = {**self._download_options, "outtmpl": file_name}

@@ -242,3 +242,18 @@ Could not fetch latest version for requests
 2025-03-16 16:02:45,068 - INFO - Starting My Downloader
 2025-03-16 16:06:51,659 - INFO - Starting My Downloader
 2025-03-16 16:06:53,661 - DEBUG - =============================== Exiting program ================================
+2025-03-16 22:12:54,815 - INFO - Starting Playlist Downloading
+2025-03-16 22:12:57,386 - ERROR - Invalid URL format
+2025-03-16 22:14:06,388 - INFO - Starting Playlist Downloading
+2025-03-16 22:14:19,121 - INFO - You are downloading the playlist: Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:14:19,121 - INFO - From (Alaa & Yehya Academy أكاديمية آلاء و يحيى) Channel on YouTube
+
+2025-03-16 22:14:19,149 - INFO - Total videos in the playlist: 55
+
+2025-03-16 22:14:19,189 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Downloads\Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:14:19,247 - INFO - Downloading video 1 of 55: Mastering Django in 2023 (Arabic)  – : Course Overview
+
+2025-03-16 22:14:44,590 - INFO - Downloading video 2 of 55: Mastering Django in 2023 (Arabic) - CMD
+
