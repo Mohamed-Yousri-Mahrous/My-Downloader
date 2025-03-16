@@ -20,14 +20,19 @@ class Playlist(Video):
             "format": "best",
             "quiet": True,
             "no_warnings": True,
+            "ignoreerrors": True,  # Added to handle download errors gracefully
         }
 
     def setup_folder(self, title):
-        safe_title = re.sub(r'[\\/:*?"<>|]', "-", title)
-        folder_path = self.download_path / safe_title
-        folder_path.mkdir(parents=True, exist_ok=True)
-        os.chdir(folder_path)
-        return safe_title
+        try:
+            safe_title = re.sub(r'[\\/:*?"<>|]', "-", title)
+            folder_path = self.download_path / safe_title
+            folder_path.mkdir(parents=True, exist_ok=True)
+            os.chdir(folder_path)
+            return safe_title
+        except AttributeError:
+            self.download_path = Path.home() / "Downloads"  # Fallback path
+            return self.setup_folder(title)
 
     def get_info(self, url):
         try:
@@ -63,34 +68,46 @@ class Playlist(Video):
 
     def playlist_process(self, videos):
         try:
+
             total_videos = len(videos)
-            file_name = f"{video['playlist_index']} - {video['title']}.mp4"
+
             for index, video in enumerate(videos, start=1):
                 try:
-
                     if video["title"] in self.INVALID_VIDEO_TITLES:
                         self.logger.warning(f"skipped video {index}-{video['title']}\n")
                         continue
 
                     self._download_single_video(video, index, total_videos)
 
+                except KeyboardInterrupt:
+                    self.logger.info("Program interrupted by user")
+                    self.exit_program()
+
                 except Exception as e:
                     self.logger.error(f"Error downloading video {index}: {str(e)}")
                     print(f"An error occurred: {e}")
+                    continue
 
+            self.logger.info(
+                "All Videos Downloaded Successfully".center(self.width, "=")
+            )
+            input("Press Enter To continue ...")
         except Exception as e:
             self.logger.error(f"Error in playlist download: {str(e)}")
             input("Press Enter to Continue...")
 
     def _delete_partial_download(self, file_name):
         """Delete any existing partial download files"""
-        part_file = Path(f"{file_name}.part")
-        if part_file.exists():
-            self.logger.info(f"Removing partial download: {part_file}")
-            part_file.unlink()
+        try:
+            part_file = Path(f"{file_name}.part")
+            if part_file.exists():
+                self.logger.info(f"Removing partial download: {part_file}")
+                part_file.unlink()
+        except Exception as e:
+            self.logger.error(f"Error deleting partial download: {str(e)}")
 
     def _download_single_video(self, video, index, total_videos):
-
+        file_name = f"{video['playlist_index']} - {video['title']}.mp4"
         # Delete any partial downloads before starting
         self._delete_partial_download(file_name)
 
@@ -102,14 +119,6 @@ class Playlist(Video):
 
         with yt_dlp.YoutubeDL(video_option) as video_download:
             video_download.download([video["url"]])
-
-        print(
-            " All videos in the playlist have been downloaded successfully ".center(
-                self.width, "="
-            ),
-            end="\n\n",
-        )
-        input("Press Enter to Continue...")
 
     def download_playlist(self):
         try:

@@ -15,8 +15,7 @@ class Video:
     def clear_screen():
         os.system("cls" if os.name == "nt" else "clear")
 
-    @staticmethod
-    def exit_program():
+    def exit_program(self):
         """Exit the program"""
         print(" Goodbye! ".center(self.width, "="))
         self.logger.debug(" Exiting program ".center(self.width, "="))

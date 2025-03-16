@@ -257,3 +257,71 @@ Could not fetch latest version for requests
 
 2025-03-16 22:14:44,590 - INFO - Downloading video 2 of 55: Mastering Django in 2023 (Arabic) - CMD
 
+2025-03-16 22:26:55,854 - INFO - Starting Playlist Downloading
+2025-03-16 22:27:10,112 - INFO - You are downloading the playlist: Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:27:10,112 - INFO - From (Alaa & Yehya Academy أكاديمية آلاء و يحيى) Channel on YouTube
+
+2025-03-16 22:27:10,112 - INFO - Total videos in the playlist: 55
+
+2025-03-16 22:27:10,195 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Downloads\Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:27:10,233 - INFO - Downloading video 1 of 55: Mastering Django in 2023 (Arabic)  – : Course Overview
+
+2025-03-16 22:27:33,757 - INFO - Downloading video 2 of 55: Mastering Django in 2023 (Arabic) - CMD
+
+2025-03-16 22:27:57,051 - INFO - Downloading video 3 of 55: Mastering Django in 2023 (Arabic) - Git and GitHub
+
+2025-03-16 22:28:18,600 - INFO - Downloading video 4 of 55: Mastering Django in 2023 (Arabic) - HTML
+
+2025-03-16 22:28:41,932 - INFO - Downloading video 5 of 55: Mastering Django in 2023 (Arabic) - Python
+
+2025-03-16 22:29:05,285 - INFO - Downloading video 6 of 55: Mastering Django in 2023 (Arabic) - Module 1 | Overview and Important Info
+
+2025-03-16 22:29:27,380 - INFO - Downloading video 7 of 55: Mastering Django in 2023 (Arabic) - Working on Module 1 | Part 1
+
+2025-03-16 22:29:51,096 - INFO - Downloading video 8 of 55: Mastering Django in 2023 (Arabic) - Working on Module 1 | Part 2
+
+2025-03-16 22:30:14,198 - INFO - Downloading video 9 of 55: Mastering Django in 2023 (Arabic) - Working on Module 1 | Part 3-a
+
+2025-03-16 22:30:18,689 - INFO - Program interrupted by user
+2025-03-16 22:30:18,744 - ERROR - Error in playlist download: name 'self' is not defined
+2025-03-16 22:45:32,420 - INFO - Starting Playlist Downloading
+2025-03-16 22:46:14,150 - INFO - You are downloading the playlist: Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:46:14,199 - INFO - From (Alaa & Yehya Academy أكاديمية آلاء و يحيى) Channel on YouTube
+
+2025-03-16 22:46:14,239 - INFO - Total videos in the playlist: 55
+
+2025-03-16 22:46:14,398 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Downloads\Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:46:14,521 - INFO - Downloading video 1 of 55: Mastering Django in 2023 (Arabic)  – : Course Overview
+
+2025-03-16 22:46:17,556 - INFO - Program interrupted by user
+2025-03-16 22:46:17,710 - ERROR - Error in playlist download: name 'self' is not defined
+2025-03-16 22:47:04,960 - INFO - Starting Playlist Downloading
+2025-03-16 22:47:19,404 - INFO - You are downloading the playlist: Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:47:19,455 - INFO - From (Alaa & Yehya Academy أكاديمية آلاء و يحيى) Channel on YouTube
+
+2025-03-16 22:47:19,509 - INFO - Total videos in the playlist: 55
+
+2025-03-16 22:47:19,524 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Downloads\Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:47:19,561 - INFO - Downloading video 1 of 55: Mastering Django in 2023 (Arabic)  – : Course Overview
+
+2025-03-16 22:47:22,234 - INFO - Program interrupted by user
+2025-03-16 22:47:22,234 - ERROR - Error in playlist download: name 'exit_program' is not defined
+2025-03-16 22:48:35,941 - INFO - Starting Playlist Downloading
+2025-03-16 22:48:45,992 - INFO - You are downloading the playlist: Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:48:46,010 - INFO - From (Alaa & Yehya Academy أكاديمية آلاء و يحيى) Channel on YouTube
+
+2025-03-16 22:48:46,010 - INFO - Total videos in the playlist: 55
+
+2025-03-16 22:48:46,010 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Downloads\Mastering Django in 2024 (Arabic) - دورة احتراف الدجانغو في 2024
+
+2025-03-16 22:48:46,263 - INFO - Downloading video 1 of 55: Mastering Django in 2023 (Arabic)  – : Course Overview
+
+2025-03-16 22:48:48,717 - INFO - Program interrupted by user
+2025-03-16 22:48:48,717 - DEBUG - =============================== Exiting program ================================
