@@ -175,3 +175,70 @@
 2025-03-15 21:27:25,242 - ERROR - Error downloading video 2: [0;31mERROR:[0m 
 [download] Got error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 2025-03-15 21:27:25,242 - INFO - Playlist download completed successfully
+2025-03-15 21:41:47,743 - INFO - Starting requirements check
+2025-03-15 21:41:47,743 - INFO - ============================= New session started ==============================
+2025-03-15 21:41:47,978 - INFO - Package requests installed version: 2.32.3
+2025-03-15 21:41:47,978 - INFO - Start checking latest version for package: requests
+2025-03-15 21:41:48,417 - INFO - Latest version for requests: 2.32.3
+2025-03-15 21:41:48,417 - INFO - Package requests is up to date
+2025-03-15 21:41:48,542 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-15 21:41:48,542 - INFO - Start checking latest version for package: yt_dlp
+2025-03-15 21:41:49,029 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-15 21:41:49,029 - INFO - Package yt_dlp is up to date
+2025-03-15 21:41:49,029 - INFO - Starting My Downloader
+2025-03-15 21:42:03,035 - INFO - User selected option: 2
+2025-03-15 21:42:03,035 - INFO - Starting Playlist Downloading
+2025-03-15 21:56:44,191 - INFO - Starting requirements check
+2025-03-15 21:56:44,222 - INFO - ============================= New session started ==============================
+2025-03-15 21:56:44,272 - INFO - Package requests installed version: 2.32.3
+2025-03-15 21:56:44,273 - INFO - Start checking latest version for package: requests
+2025-03-15 21:56:47,281 - INFO - Latest version for requests: 2.32.3
+2025-03-15 21:56:47,283 - INFO - Package requests is up to date
+2025-03-15 21:56:47,317 - INFO - Package yt_dlp installed version: 2025.2.19
+2025-03-15 21:56:47,318 - INFO - Start checking latest version for package: yt_dlp
+2025-03-15 21:56:49,318 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-15 21:56:49,320 - INFO - Package yt_dlp is up to date
+2025-03-15 21:56:49,321 - INFO - Starting My Downloader
+2025-03-15 21:56:52,268 - INFO - User selected option: 2
+2025-03-15 21:56:52,269 - INFO - Starting Playlist Downloading
+2025-03-15 21:57:10,740 - ERROR - Error getting playlist info: [0;31mERROR:[0m [youtube:tab] PLL5-Y6lgu7SJ1qj09HyD-WKMOoXtAKlz6: Unable to download API page: <urllib3.connection.HTTPSConnection object at 0x0000022968044950>: Failed to resolve 'www.youtube.com' ([Errno 11001] getaddrinfo failed) (caused by TransportError("<urllib3.connection.HTTPSConnection object at 0x0000022968044950>: Failed to resolve 'www.youtube.com' ([Errno 11001] getaddrinfo failed)"))
+2025-03-15 21:57:18,285 - WARNING - No videos found in playlist
+2025-03-15 21:57:23,309 - INFO - Starting My Downloader
+2025-03-15 21:57:25,997 - INFO - User selected option: 2
+2025-03-15 21:57:25,999 - INFO - Starting Playlist Downloading
+2025-03-15 21:58:17,259 - ERROR - Error getting playlist info: [0;31mERROR:[0m [youtube:tab] PLL5-Y6lgu7SJ1qj09HyD-WKMOoXtAKlz6: Unable to download API page: <urllib3.connection.HTTPSConnection object at 0x0000022968046270>: Failed to resolve 'www.youtube.com' ([Errno 11001] getaddrinfo failed) (caused by TransportError("<urllib3.connection.HTTPSConnection object at 0x0000022968046270>: Failed to resolve 'www.youtube.com' ([Errno 11001] getaddrinfo failed)"))
+2025-03-15 21:58:19,700 - WARNING - No videos found in playlist
+2025-03-15 21:58:20,148 - INFO - Starting My Downloader
+2025-03-15 21:58:24,550 - INFO - User selected option: 3
+2025-03-15 21:58:24,551 - INFO - Exiting program
+2025-03-15 22:35:34,838 - INFO - ========================== Checking Requirements ...  ==========================
+2025-03-15 22:35:46,943 - ERROR - Failed to get latest version for requests: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/requests/json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000026E559E3B60>: Failed to resolve 'pypi.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-15 22:35:46,943 - ERROR - Could not fetch latest version for requests
+2025-03-15 22:36:40,479 - ERROR - Failed to get latest version for requests: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/requests/json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000025E349CB0E0>: Failed to resolve 'pypi.org' ([Errno 11002] getaddrinfo failed)"))
+2025-03-15 22:36:40,479 - ERROR - Could not fetch latest version for requests
+2025-03-15 22:37:54,712 - ERROR - Failed to get latest version for requests: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/requests/json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002E5A7B6DF70>: Failed to resolve 'pypi.org' ([Errno 11001] getaddrinfo failed)"))
+2025-03-15 22:37:54,713 - ERROR - 
+Could not fetch latest version for requests
+2025-03-15 22:39:12,767 - ERROR - Failed to get latest version for requests: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/requests/json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001C2DAB23B60>: Failed to resolve 'pypi.org' ([Errno 11001] getaddrinfo failed)"))
+
+2025-03-15 22:39:12,767 - ERROR - Could not fetch latest version for requests
+2025-03-15 22:44:52,649 - INFO - Latest version for requests: 2.32.3
+2025-03-15 22:44:53,280 - INFO - Latest version for yt_dlp: 2025.2.19
+2025-03-15 22:54:16,352 - INFO - Starting My Downloader
+2025-03-15 22:55:09,019 - INFO - Program interrupted by user
+2025-03-15 22:55:09,021 - INFO - Exiting program
+2025-03-15 22:55:22,727 - INFO - Starting My Downloader
+2025-03-15 22:55:26,152 - INFO - User selected option: 3
+2025-03-15 22:55:26,152 - INFO - ================================Exiting program=================================
+2025-03-15 22:59:50,948 - INFO - Starting My Downloader
+2025-03-16 15:21:07,954 - ERROR - Failed to get latest version for requests: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /pypi/requests/json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002089FF96750>: Failed to resolve 'pypi.org' ([Errno 11001] getaddrinfo failed)"))
+
+2025-03-16 15:21:07,955 - ERROR - Could not fetch latest version for requests
+2025-03-16 15:21:07,955 - INFO - Starting My Downloader
+2025-03-16 15:27:23,456 - INFO - Starting My Downloader
+2025-03-16 15:56:33,438 - INFO - Starting My Downloader
+2025-03-16 15:56:37,865 - INFO - =============================== Exiting program ================================
+2025-03-16 16:01:15,935 - INFO - Starting My Downloader
+2025-03-16 16:02:45,068 - INFO - Starting My Downloader
+2025-03-16 16:06:51,659 - INFO - Starting My Downloader
+2025-03-16 16:06:53,661 - DEBUG - =============================== Exiting program ================================

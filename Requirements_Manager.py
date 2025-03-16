@@ -1,31 +1,68 @@
-import os
 import subprocess
 import requests
-import logging
 from importlib.metadata import version
+from Video_Downloading import Video
 
 
-class RequirementsManager:
-    def __init__(self, logger):
-        self.logger = logger
-        self.width = 80
+class RequirementsManager(Video):
+    """
+    A class to manage Python package requirements for the application.
+
+    This class handles:
+    1. Reading requirements from requirements.txt
+    2. Checking installed package versions
+    3. Fetching latest versions from PyPI
+    4. Updating packages when necessary
+
+    Workflow:
+    1. Reads requirements.txt file
+    2. For each package:
+        - Checks current installed version
+        - Fetches latest version from PyPI
+        - Updates if newer version is available
+
+    Inherits from:
+        Video: Base class providing logging and utility functions
+
+    Usage:
+        manager = RequirementsManager()
+        manager.check_requirements()
+    """
 
     def get_latest_version(self, package_name):
-        self.logger.info(f"Start checking latest version for package: {package_name}")
+        """
+        Fetch the latest version of a package from PyPI.
+
+        Args:
+            package_name: Name of the package to check
+
+        Returns:
+            str: Latest version number if successful, None otherwise
+
+        Raises:
+            RequestException: If PyPI request fails
+        """
         url = f"https://pypi.org/pypi/{package_name}/json"
         try:
             response = requests.get(url, timeout=5)
             response.raise_for_status()
             version = response.json()["info"]["version"]
-            self.logger.info(f"Latest version for {package_name}: {version}")
             return version
         except requests.RequestException as e:
-            print("")
-            self.logger.error(f"Failed to get latest version for {package_name}: {e}")
+            self.logger.error(f"Failed to get latest version for {package_name}: {e}\n")
             return None
 
     @staticmethod
     def read_requirement():
+        """
+        Read and parse requirements.txt file.
+
+        Returns:
+            list: List of package names from requirements.txt
+
+        Raises:
+            FileNotFoundError: If requirements.txt is not found
+        """
         try:
             with open("requirements.txt", "r") as file:
                 packages = [
@@ -37,9 +74,22 @@ class RequirementsManager:
         except FileNotFoundError:
             logging.error("requirements.txt file not found!")
             input("Press Enter to exit...")
-            os._exit(1)
+            self.exit_program()
 
-    def install_package(self, package, upgrade=False):
+    def install_package(self, package, upgrade):
+        """
+        Install or upgrade a Python package using pip.
+
+        Args:
+            package: Name of the package to install
+            upgrade: Whether to upgrade existing package
+
+        Returns:
+            bool: True if installation successful, False otherwise
+
+        Raises:
+            CalledProcessError: If pip command fails
+        """
         try:
             command = ["pip", "install"]
             if upgrade:
@@ -47,7 +97,6 @@ class RequirementsManager:
             command.append(package)
             subprocess.run(command, shell=True, check=True, text=True)
             self.logger.info(f"Successfully installed {package}")
-            print(f"- {package} has been installed successfully!")
             return True
         except subprocess.CalledProcessError:
             self.logger.error(f"Failed to install {package}")
@@ -55,10 +104,28 @@ class RequirementsManager:
             return False
 
     def check_requirements(self):
-        """Check and update package requirements from requirements.txt"""
-        self.logger.info("Starting requirements check")
-        self.logger.info(" New session started ".center(self.width, "="))
-        print(" Checking Requirements ... ".center(self.width, "="))
+        """
+        Check and update all package requirements.
+
+        Process:
+        1. Read requirements.txt
+        2. For each package:
+            - Get current version
+            - Check latest version
+            - Update if needed
+
+        Returns:
+            bool: True if all requirements are met, False otherwise
+
+        Example:
+            manager = RequirementsManager()
+            if manager.check_requirements():
+                print("All packages up to date")
+            else:
+                print("Package update failed")
+        """
+        self.clear_screen()
+        print(" Checking Requirements ...  ".center(self.width, "="))
 
         packages = self.read_requirement()
         if not packages:
@@ -68,9 +135,6 @@ class RequirementsManager:
         for package in packages:
             try:
                 installed_version = version(package)
-                self.logger.info(
-                    f"Package {package} installed version: {installed_version}"
-                )
                 print(
                     f"\n- {package} is installed with version {installed_version}",
                     end="",
@@ -78,26 +142,26 @@ class RequirementsManager:
 
                 latest_version = self.get_latest_version(package)
                 if not latest_version:
-                    print("")
                     self.logger.error(f"Could not fetch latest version for {package}")
                     return False
 
                 if latest_version != installed_version:
                     self.logger.info(
-                        f"Update available for {package}: {latest_version}"
+                        f"Update available for {package}: {latest_version}\n"
                     )
-                    print(
-                        f"-\n New version {latest_version} is available for {package}"
-                    )
+
                     if not self.install_package(package, upgrade=True):
                         return False
                 else:
-                    self.logger.info(f"Package {package} is up to date")
                     print(f", its up to date")
 
             except Exception as e:
-                self.logger.error(f"Error installing {package}: {str(e)}")
-                print(f"\n- Error installing {package}: {str(e)}")
+                self.logger.error(f"Error installing {package}: {str(e)}\n")
                 return False
 
         return True
+
+
+if __name__ == "__main__":
+    manager = RequirementsManager()
+    manager.check_requirements()

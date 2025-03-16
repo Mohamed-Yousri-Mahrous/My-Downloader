@@ -2,17 +2,25 @@ import os
 import yt_dlp
 import logging
 from pathlib import Path
+import sys
 
 
 class Video:
     def __init__(self):
         self.download_path = Path.home() / "Downloads"
         self.width = 80
-        self.logger = self.get_logger()
+        self.logger = self.setup_logger()
 
     @staticmethod
     def clear_screen():
         os.system("cls" if os.name == "nt" else "clear")
+
+    @staticmethod
+    def exit_program():
+        """Exit the program"""
+        print(" Goodbye! ".center(self.width, "="))
+        self.logger.debug(" Exiting program ".center(self.width, "="))
+        sys.exit(0)
 
     def welcome(self, program_name):
         self.logger.info(f"Starting {program_name}")
@@ -27,9 +35,9 @@ class Video:
         print("\n".join(message))
 
     @staticmethod
-    def get_logger():
+    def setup_logger():
         logger = logging.getLogger("Mohamed")
-        logger.setLevel(logging.INFO)
+        logger.setLevel(logging.DEBUG)
 
         if not logger.hasHandlers():
             file_format = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
@@ -38,7 +46,7 @@ class Video:
                 (logging.StreamHandler(), logging.INFO, console_format),
                 (
                     logging.FileHandler("Download.log", encoding="utf-8"),
-                    logging.INFO,
+                    logging.DEBUG,
                     file_format,
                 ),
             ]
@@ -100,18 +108,15 @@ class Video:
 
         except KeyError as ke:
             self.logger.error(f"KeyError while fetching video info: {ke}")
-            print(f"KeyError: {ke}")
             input("Press Enter to Continue...")
 
         except Exception as e:
             self.logger.error(f"Error while fetching video info: {e}")
-            print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
 
-    def download_video(self, video_info):
+    def video_process(self, video_info):
         if not video_info:
             self.logger.error("No video information available")
-            print("No video information available. Cannot download.")
             input("Press Enter to Continue...")
             return
 
@@ -123,27 +128,24 @@ class Video:
                 "no_warnings": True,
             }
 
-            self.logger.info(f"Starting download for video: {video_info['title']}")
-            print(f"Downloading {video_info['title']} ...", end="\n\n")
+            self.logger.info(f"Downloading {video_info['title']} ...\n")
 
             with yt_dlp.YoutubeDL(video_option) as video_download:
                 video_download.download([video_info["webpage_url"]])
 
-            self.logger.info(f"Successfully downloaded video: {video_info['title']}")
+            self.logger.debug(f"Successfully downloaded video: {video_info['title']}")
             print(" Video downloaded successfully ".center(80, "="), end="\n\n")
             input("Press Enter to Continue...")
 
         except yt_dlp.utils.DownloadError as e:
             self.logger.error(f"Download error: {e}")
-            print(f"Download error occurred: {e}")
             input("Press Enter to Continue...")
 
         except Exception as e:
             self.logger.error(f"Unexpected error during download: {e}")
-            print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
 
-    def main(self):
+    def download_video(self):
         self.welcome("Video Downloading")
 
         try:
@@ -153,24 +155,22 @@ class Video:
                 self.logger.warning("Empty URL provided")
                 raise ValueError("URL cannot be empty.")
 
-            self.logger.info(f"Processing video URL: {video_url}")
+            self.logger.debug(f"Processing video URL: {video_url}")
             print(" Loading ... ".center(80, "=").title(), end="\n\n")
 
             info = self.get_info(video_url)
 
             if info:
-                self.download_video(info)
+                self.video_process(info)
 
         except ValueError as ve:
             self.logger.error(f"ValueError: {ve}")
-            print(f"ValueError: {ve}")
             input("Press Enter to Continue...")
 
         except Exception as e:
             self.logger.error(f"Unexpected error in main: {e}")
-            print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
 
 
 if __name__ == "__main__":
-    Video().main()
+    Video().download_video()

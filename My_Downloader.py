@@ -1,24 +1,11 @@
 from Video_Downloading import Video
 from Playlist_Downloading import Playlist
 from Requirements_Manager import RequirementsManager
-import sys
 
 
 class MyDownloader(Video):
     def __init__(self):
         super().__init__()
-        self.req_manager = RequirementsManager(self.logger)
-
-    def check_requirements(self):
-        """Check and update package requirements from requirements.txt"""
-        self.clear_screen()  # Use instance method instead of class method
-        if not self.req_manager.check_requirements():
-            self.exit_program()
-
-    def exit_program(self):
-        self.logger.info("Exiting program")
-        print(" Goodbye! ".center(self.width, "="))
-        sys.exit(0)
 
     def display_menu(self):
         """Display the main menu options"""
@@ -34,8 +21,8 @@ class MyDownloader(Video):
     def main(self):
         # Initialize actions with instances only when needed
         actions = {
-            "1": lambda: Video().main(),
-            "2": lambda: Playlist().main(),
+            "1": lambda: self.download_video(),
+            "2": lambda: Playlist().download_playlist,
             "3": self.exit_program,
         }
 
@@ -48,7 +35,6 @@ class MyDownloader(Video):
                     self.invalid_option()
                     continue
 
-                self.logger.info(f"User selected option: {choice}")
                 action = actions.get(choice)
 
                 if action:
@@ -57,8 +43,8 @@ class MyDownloader(Video):
                     self.invalid_option()
 
             except KeyboardInterrupt:
+                print("\n")
                 self.logger.info("Program interrupted by user")
-                print("\nProgram interrupted by user. Exiting...")
                 self.exit_program()
 
             except Exception as e:
@@ -70,16 +56,11 @@ class MyDownloader(Video):
         input("Press Enter to continue...")
 
 
-def main():
-    """Entry point of the application"""
+if __name__ == "__main__":
     try:
         downloader = MyDownloader()
-        downloader.check_requirements()
+        RequirementsManager().check_requirements()
         downloader.main()
     except Exception as e:
         print(f"Fatal error: {e}")
-        sys.exit(1)
-
-
-if __name__ == "__main__":
-    main()
+        downloader.exit_program()

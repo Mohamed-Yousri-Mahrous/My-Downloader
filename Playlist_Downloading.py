@@ -3,7 +3,6 @@ from pathlib import Path
 import yt_dlp
 import re
 from Video_Downloading import Video
-from typing import List, Dict, Optional
 
 
 class Playlist(Video):
@@ -23,14 +22,14 @@ class Playlist(Video):
             "no_warnings": True,
         }
 
-    def setup_folder(self, title: str) -> str:
+    def setup_folder(self, title):
         safe_title = re.sub(r'[\\/:*?"<>|]', "-", title)
         folder_path = self.download_path / safe_title
         folder_path.mkdir(parents=True, exist_ok=True)
         os.chdir(folder_path)
         return safe_title
 
-    def get_info(self, url: str) -> Optional[List[Dict]]:
+    def get_info(self, url):
         try:
             with yt_dlp.YoutubeDL(self._playlist_options) as youtube_playlist:
                 playlist_info = youtube_playlist.extract_info(url, download=False)
@@ -52,18 +51,17 @@ class Playlist(Video):
 
         except Exception as e:
             self.logger.error(f"Error getting playlist info: {str(e)}")
-            print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
             return None
 
-    def create_video_index(self, videos: List[Dict]) -> List[Dict]:
+    def create_video_index(self, videos):
         for index, video in enumerate(videos, start=1):
             video["playlist_index"] = index
 
         print(f" Now downloading the playlist ... ".center(self.width, "="), end="\n\n")
         return videos
 
-    def download_playlist(self, videos: List[Dict]) -> None:
+    def playlist_process(self, videos):
         try:
             total_videos = len(videos)
 
@@ -83,26 +81,23 @@ class Playlist(Video):
 
         except Exception as e:
             self.logger.error(f"Error in playlist download: {str(e)}")
-            print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
 
-    def _handle_invalid_video(self, video: Dict, index: int) -> None:
+    def _handle_invalid_video(self, video, index):
         self.logger.warning(f"Skipping {video['title']} at index {index}")
         print(
             f"- Downloading video {index} is skipped As it is {video['title']} ".title(),
             end="\n\n",
         )
 
-    def _delete_partial_download(self, file_name: str) -> None:
+    def _delete_partial_download(self, file_name):
         """Delete any existing partial download files"""
         part_file = Path(f"{file_name}.part")
         if part_file.exists():
             self.logger.info(f"Removing partial download: {part_file}")
             part_file.unlink()
 
-    def _download_single_video(
-        self, video: Dict, index: int, total_videos: int
-    ) -> None:
+    def _download_single_video(self, video, index, total_videos):
         file_name = f"{video['playlist_index']} - {video['title']}.mp4"
 
         # Delete any partial downloads before starting
@@ -117,7 +112,7 @@ class Playlist(Video):
         with yt_dlp.YoutubeDL(video_option) as video_download:
             video_download.download([video["url"]])
 
-    def _show_completion_message(self) -> None:
+    def _show_completion_message(self):
         self.logger.info("Playlist download completed successfully")
         print(
             " All videos in the playlist have been downloaded successfully ".center(
@@ -127,7 +122,7 @@ class Playlist(Video):
         )
         input("Press Enter to Continue...")
 
-    def main(self) -> None:
+    def download_playlist(self):
         try:
             Video.welcome(self, "Playlist Downloading")
             url = input("Enter the URL of the playlist >> ").strip()
@@ -153,16 +148,15 @@ class Playlist(Video):
                 return
 
             indexed_videos = self.create_video_index(videos)
-            self.download_playlist(indexed_videos)
+            self.playlist_process(indexed_videos)
 
         except ValueError as ve:
             self.logger.error(f"ValueError: {str(ve)}")
             input("Press Enter to Continue...")
         except Exception as e:
             self.logger.error(f"Unexpected error: {str(e)}")
-            print(f"An error occurred: {e}")
             input("Press Enter to Continue...")
 
 
 if __name__ == "__main__":
-    Playlist().main()
+    Playlist().download_playlist()
