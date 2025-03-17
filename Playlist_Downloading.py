@@ -60,6 +60,7 @@ class Playlist(Video):
 
     def playlist_process(self, videos):
         try:
+            self.delete_partial_download(Path.cwd())
 
             total_videos = len(videos)
 
@@ -88,21 +89,15 @@ class Playlist(Video):
             self.logger.error(f"Error in playlist download: {str(e)}")
             input("Press Enter to Continue...")
 
-    def _delete_partial_download(self, file_name):
+    def delete_partial_download(self, folder_path):
         """Delete any existing partial download files"""
-        try:
-            part_file = Path(f"{file_name}.part")
-            if part_file.exists():
-                self.logger.info(f"Removing partial download: {part_file}")
-                os.remove(part_file)
-        except Exception as e:
-            self.logger.error(f"Error deleting partial download: {str(e)}")
+        for part_file in folder_path.glob("*.part"):
+            part_file.unlink()
+            self.logger.info(f"Removing partial download: {part_file.name}\n")
 
     def _download_single_video(self, video, index, total_videos):
         try:
             file_name = f"{video['playlist_index']} - {video['title']}.mp4"
-            # Delete any partial downloads before starting
-            self._delete_partial_download(file_name)
 
             self.logger.info(
                 f"Downloading video {index} of {total_videos}: {video['title']}\n"
@@ -157,4 +152,7 @@ class Playlist(Video):
 
 
 if __name__ == "__main__":
-    Playlist().download_playlist()
+    folder_path = Path.cwd()
+    # Delete all .zip files in current directory
+
+    # Playlist().download_playlist()

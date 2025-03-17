@@ -610,3 +610,102 @@ ERROR: Path.replace() takes 2 positional arguments but 3 were given
 2025-03-17 11:43:54,580 - DEBUG - Starting My Downloader
 
 2025-03-17 11:43:58,748 - DEBUG - =============================== Exiting program ================================
+2025-03-17 13:06:19,376 - DEBUG - Starting My Downloader
+
+2025-03-17 13:06:22,002 - DEBUG - Starting Video Downloading
+
+2025-03-17 13:06:27,361 - DEBUG - Processing video URL: https://www.youtube.com/watch?v=A9kSngn7254&t=57s&pp=ygURb29wIHB5dGhvbiDYtNix2K0%3D
+
+2025-03-17 13:06:39,829 - INFO - You are downloading Video >> Python Object Oriented Programming -  شرح للبرمجة كائنية التوجه في بايثون
+
+2025-03-17 13:06:39,829 - INFO - From (Codezilla) Channel on YouTube
+
+2025-03-17 13:06:39,829 - INFO - The Video Duration is >> 2h 41m 26s
+
+2025-03-17 13:06:39,829 - INFO - The Video will be Saved in >> C:\Users\Admin\Downloads
+
+2025-03-17 13:06:39,845 - INFO - Downloading Python Object Oriented Programming -  شرح للبرمجة كائنية التوجه في بايثون ...
+
+2025-03-17 13:15:48,046 - DEBUG - Successfully downloaded video: Python Object Oriented Programming -  شرح للبرمجة كائنية التوجه في بايثون
+2025-03-17 13:19:34,235 - DEBUG - Starting My Downloader
+
+2025-03-17 13:52:32,566 - DEBUG - =============================== Exiting program ================================
+2025-03-17 21:12:25,737 - DEBUG - Starting My Downloader
+
+2025-03-17 21:12:27,334 - DEBUG - Starting Playlist Downloading
+
+2025-03-17 21:12:30,226 - DEBUG - Processing Url >> https://youtube.com/playlist?list=PLL5-Y6lgu7SJ1qj09HyD-WKMOoXtAKlz6&si=9q3lwvymeBwXyyWn
+
+2025-03-17 21:12:34,419 - INFO - You are downloading the playlist: مسلسل | قصص الإسلام
+
+2025-03-17 21:12:34,419 - INFO - From (One Way Production) Channel on YouTube
+
+2025-03-17 21:12:34,419 - INFO - Total videos in the playlist: 30
+
+2025-03-17 21:12:34,434 - INFO - The playlist will be Saved in the folder >> C:\Users\Admin\Downloads\مسلسل - قصص الإسلام
+
+2025-03-17 21:12:34,455 - INFO - Removing partial download: C:\Users\Admin\Downloads\مسلسل - قصص الإسلام\26 - قصة العبد الصالح والعبد الحر # قصص الإسلام # Islam stories.mp4.part
+2025-03-17 21:12:34,455 - INFO - Downloading video 1 of 30: قصة الفاروق عمر بن الخطاب | قصص الإسلام | Islam stories
+
+2025-03-17 21:12:42,390 - INFO - Downloading video 2 of 30: عكرمة الفياض " جابر عثرات الكرام | قصص الإسلام | Islam stories
+
+2025-03-17 21:12:50,381 - INFO - Downloading video 3 of 30: الإمام أحمد بن حنبل | قصص الإسلام | Islam stories
+
+2025-03-17 21:12:58,675 - INFO - Downloading video 4 of 30: قصة إسلام مدينة سمرقند على يد المسلمين | قصص الإسلام | Islam stories
+
+2025-03-17 21:13:06,818 - INFO - Downloading video 5 of 30: الرجل الذي قال عنه النبي (ص) انه من اهل الجنة | قصص الإسلام | Islam stories
+
+2025-03-17 21:13:14,590 - INFO - Downloading video 6 of 30: فتح العراق وقصة الاميرات الثلاثة | قصص الإسلام | Islam stories
+
+2025-03-17 21:13:23,847 - INFO - Downloading video 7 of 30: قصة الخياط المؤذن | قصص الإسلام | Islam stories
+
+2025-03-17 21:13:33,212 - INFO - Downloading video 8 of 30: قصة الراعي الفقير | قصص الإسلام | Islam stories
+
+2025-03-17 21:13:41,906 - INFO - Downloading video 9 of 30: قصة سيف الدولة والرجل اليهودي | قصص الإسلام | Islam stories
+
+2025-03-17 21:13:49,348 - INFO - Downloading video 10 of 30: العدل فى الاسلام | قصص الإسلام | Islam stories
+
+2025-03-17 21:13:56,835 - INFO - Downloading video 11 of 30: قصة زواج الشاب والفتاة الصالحين | قصص الإسلام | Islam stories
+
+2025-03-17 21:14:04,114 - INFO - Downloading video 12 of 30: فضل التجارة مع الله | قصص الإسلام | Islam stories
+
+2025-03-17 21:14:11,725 - INFO - Downloading video 13 of 30: بذرة الأمانة فى الرجل الصالح | قصص الإسلام | Islam stories
+
+2025-03-17 21:14:19,562 - INFO - Downloading video 14 of 30: قصة أم الخير | قصص الإسلام | Islam stories
+
+2025-03-17 21:14:27,248 - INFO - Downloading video 15 of 30: بستان الجنة | قصص الإسلام | Islam stories
+
+2025-03-17 21:14:35,023 - INFO - Downloading video 16 of 30: طاعة الوالدين | قصص الإسلام | Islam stories
+
+2025-03-17 21:14:43,138 - INFO - Downloading video 17 of 30: محمد بن سيرين | قصص الإسلام | Islam stories
+
+2025-03-17 21:14:50,869 - INFO - Downloading video 18 of 30: الحق والقوة فى الاسلام | قصص الإسلام | Islam stories
+
+2025-03-17 21:15:01,290 - INFO - Downloading video 19 of 30: فتح بيت المقدس | قصص الإسلام | Islam stories
+
+2025-03-17 21:15:14,342 - INFO - Downloading video 20 of 30: روائع قصص أبو حنيفة النعمان | قصص الإسلام | Islam stories
+
+2025-03-17 21:15:22,789 - INFO - Downloading video 21 of 30: ربيعة الرأي | قصص الإسلام | Islam stories
+
+2025-03-17 21:15:31,777 - INFO - Downloading video 22 of 30: قصة النبي (ص) و ثمامة بن اثال اليهودي | قصص الإسلام | Islam stories
+
+2025-03-17 21:15:42,129 - INFO - Downloading video 23 of 30: الزوج الصالح | قصص الإسلام | Islam stories
+
+2025-03-17 21:15:52,023 - INFO - Downloading video 24 of 30: الهجرة الى الحبشة | قصص الإسلام | Islam stories
+
+2025-03-17 21:16:01,042 - INFO - Downloading video 25 of 30: قصة مالك بن دينار | قصص الإسلام | Islam stories
+
+2025-03-17 21:16:10,120 - INFO - Downloading video 26 of 30: قصة العبد الصالح والعبد الحر | قصص الإسلام | Islam stories
+
+2025-03-17 21:17:14,554 - INFO - Downloading video 27 of 30: القاسم وتوسيع المسجد النبوي الشريف | قصص الإسلام | Islam stories
+
+2025-03-17 21:17:22,632 - INFO - Downloading video 28 of 30: قصة ايوب والاحسان الى الجار | قصص الإسلام | Islam stories
+
+2025-03-17 21:17:32,965 - INFO - Downloading video 29 of 30: قصة معاذ بن جبل | قصص الإسلام | Islam stories
+
+2025-03-17 21:17:40,289 - INFO - Downloading video 30 of 30: قصة النبي عليه السلام وسراقة بن مالك | قصص الإسلام | Islam stories
+
+2025-03-17 21:17:48,385 - INFO - ====================== All Videos Downloaded Successfully ======================
+2025-03-17 21:17:50,755 - DEBUG - Starting My Downloader
+
+2025-03-17 21:17:54,052 - DEBUG - =============================== Exiting program ================================
