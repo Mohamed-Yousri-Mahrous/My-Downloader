@@ -590,3 +590,23 @@ ERROR: Path.replace() takes 2 positional arguments but 3 were given
 2025-03-17 11:29:32,090 - WARNING - Invalid option selected
 2025-03-17 11:29:42,976 - DEBUG - Starting My Downloader
 2025-03-17 11:29:52,755 - DEBUG - =============================== Exiting program ================================
+2025-03-17 11:39:51,433 - DEBUG - Starting My Downloader
+
+2025-03-17 11:40:36,598 - DEBUG - Starting Video Downloading
+
+2025-03-17 11:41:01,953 - DEBUG - Processing video URL: https://www.youtube.com/watch?v=A9kSngn7254&t=57s&pp=ygURb29wIHB5dGhvbiDYtNix2K0%3D
+
+2025-03-17 11:41:16,986 - INFO - You are downloading Video >> Python Object Oriented Programming -  شرح للبرمجة كائنية التوجه في بايثون
+
+2025-03-17 11:41:18,963 - INFO - From (Codezilla) Channel on YouTube
+
+2025-03-17 11:41:20,385 - INFO - The Video Duration is >> 2h 41m 26s
+
+2025-03-17 11:41:21,523 - INFO - The Video will be Saved in >> C:\Users\Admin\Downloads
+
+2025-03-17 11:41:23,401 - INFO - Downloading Python Object Oriented Programming -  شرح للبرمجة كائنية التوجه في بايثون ...
+[download] Got error: <urllib3.connection.HTTPSConnection object at 0x0000021846F87740>: Failed to resolve 'rr2---sn-uxaxjvhxbt2u-j5pe7.googlevideo.com' ([Errno 11002] getaddrinfo failed)
+2025-03-17 11:41:58,989 - DEBUG - Successfully downloaded video: Python Object Oriented Programming -  شرح للبرمجة كائنية التوجه في بايثون
+2025-03-17 11:43:54,580 - DEBUG - Starting My Downloader
+
+2025-03-17 11:43:58,748 - DEBUG - =============================== Exiting program ================================

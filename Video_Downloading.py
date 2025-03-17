@@ -18,7 +18,7 @@ class Video:
 
         self.download_option = {
             "format": "best",
-            "outtmpl": self.download_path / "%(title)s.%(ext)s",
+            "outtmpl": str(self.download_path / "%(title)s.%(ext)s"),
             "quiet": True,
             "no_warnings": True,
             "ignoreerrors": True,
