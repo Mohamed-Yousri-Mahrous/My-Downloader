@@ -3,6 +3,7 @@ from pathlib import Path
 import yt_dlp
 import re
 from Video_Downloading import Video
+import os
 
 
 class Playlist(Video):
@@ -11,17 +12,6 @@ class Playlist(Video):
 
     def __init__(self):
         super().__init__()
-        self._playlist_options = {
-            "extract_flat": True,
-            "quiet": True,
-            "no_warnings": True,
-        }
-        self._download_options = {
-            "format": "best",
-            "quiet": True,
-            "no_warnings": True,
-            "ignoreerrors": True,  # Added to handle download errors gracefully
-        }
 
     def setup_folder(self, title):
         try:
@@ -31,12 +21,14 @@ class Playlist(Video):
             os.chdir(folder_path)
             return safe_title
         except AttributeError:
-            self.download_path = Path.home() / "Downloads"  # Fallback path
+            self.download_path = Path.home() / "Downloads"
             return self.setup_folder(title)
 
     def get_info(self, url):
         try:
-            with yt_dlp.YoutubeDL(self._playlist_options) as youtube_playlist:
+            info_option = {**self.info_option, "extract_flat": True}
+
+            with yt_dlp.YoutubeDL(info_option) as youtube_playlist:
                 playlist_info = youtube_playlist.extract_info(url, download=False)
 
             playlist_title = playlist_info["title"]
@@ -89,7 +81,7 @@ class Playlist(Video):
                     continue
 
             self.logger.info(
-                "All Videos Downloaded Successfully".center(self.width, "=")
+                " All Videos Downloaded Successfully ".center(self.width, "=")
             )
             input("Press Enter To continue ...")
         except Exception as e:
@@ -102,29 +94,38 @@ class Playlist(Video):
             part_file = Path(f"{file_name}.part")
             if part_file.exists():
                 self.logger.info(f"Removing partial download: {part_file}")
-                part_file.unlink()
+                os.remove(part_file)
         except Exception as e:
             self.logger.error(f"Error deleting partial download: {str(e)}")
 
     def _download_single_video(self, video, index, total_videos):
-        file_name = f"{video['playlist_index']} - {video['title']}.mp4"
-        # Delete any partial downloads before starting
-        self._delete_partial_download(file_name)
+        try:
+            file_name = f"{video['playlist_index']} - {video['title']}.mp4"
+            # Delete any partial downloads before starting
+            self._delete_partial_download(file_name)
 
-        self.logger.info(
-            f"Downloading video {index} of {total_videos}: {video['title']}\n"
-        )
+            self.logger.info(
+                f"Downloading video {index} of {total_videos}: {video['title']}\n"
+            )
 
-        video_option = {**self._download_options, "outtmpl": file_name}
+            video_option = {**self.download_option, "outtmpl": file_name}
 
-        with yt_dlp.YoutubeDL(video_option) as video_download:
-            video_download.download([video["url"]])
+            with yt_dlp.YoutubeDL(video_option) as video_download:
+                video_download.download([video["url"]])
+
+        except yt_dlp.utils.DownloadError as e:
+            self.logger.error(f"Download failed for video {index}: {str(e)}")
+        except KeyError as e:
+            self.logger.error(f"Missing required video information: {str(e)}")
+        except Exception as e:
+            self.logger.error(f"Unexpected error downloading video {index}: {str(e)}")
 
     def download_playlist(self):
         try:
             Video.welcome(self, "Playlist Downloading")
             url = input("Enter the URL of the playlist >> ").strip()
 
+            self.logger.debug(f"Processing Url >> {url}\n")
             if not url:
                 self.logger.error("[Error]: Empty URL provided")
                 raise ValueError("URL cannot be empty.")
@@ -132,9 +133,8 @@ class Playlist(Video):
             print(" Loading ... ".center(self.width, "=").title(), end="\n\n")
 
             if not url.startswith(self.VALID_URL_PREFIX):
-                self.logger.error("Invalid URL format")
-                print(
-                    f"\nPlease check that Your URL starts with >> {self.VALID_URL_PREFIX}"
+                self.logger.error(
+                    f"Invalid URL format, Please check that Your URL starts with >> {self.VALID_URL_PREFIX}"
                 )
                 input("Press Enter to Continue...")
                 return

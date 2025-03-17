@@ -22,7 +22,7 @@ class MyDownloader(Video):
         # Initialize actions with instances only when needed
         actions = {
             "1": lambda: self.download_video(),
-            "2": lambda: Playlist().download_playlist,
+            "2": lambda: Playlist().download_playlist(),
             "3": self.exit_program,
         }
 

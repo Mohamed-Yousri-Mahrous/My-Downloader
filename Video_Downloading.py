@@ -11,6 +11,19 @@ class Video:
         self.width = 80
         self.logger = self.setup_logger()
 
+        self.info_option = {
+            "quiet": True,
+            "no_warnings": True,
+        }
+
+        self.download_option = {
+            "format": "best",
+            "outtmpl": self.download_path / "%(title)s.%(ext)s",
+            "quiet": True,
+            "no_warnings": True,
+            "ignoreerrors": True,
+        }
+
     @staticmethod
     def clear_screen():
         os.system("cls" if os.name == "nt" else "clear")
@@ -22,7 +35,7 @@ class Video:
         sys.exit(0)
 
     def welcome(self, program_name):
-        self.logger.info(f"Starting {program_name}")
+        self.logger.debug(f"Starting {program_name}\n")
         self.clear_screen()
         border = "=" * self.width
         message = [
@@ -71,13 +84,7 @@ class Video:
 
     def get_info(self, url):
         try:
-            self.logger.info(f"Fetching video information for URL: {url}")
-            url_option = {
-                "quiet": True,
-                "no_warnings": True,
-            }
-
-            with yt_dlp.YoutubeDL(url_option) as youtube_Video:
+            with yt_dlp.YoutubeDL(self.info_option) as youtube_Video:
                 video_info = youtube_Video.extract_info(url, download=False)
 
             video_title = video_info["title"]
@@ -85,20 +92,11 @@ class Video:
             video_duration = video_info["duration"]
             video_duration = self.convert_duration(video_duration)
 
-            self.logger.info(f"Video title: {video_title}")
-            self.logger.info(f"Channel: {Youtube_channel}")
-            self.logger.info(f"Duration: {video_duration}")
+            self.logger.info(f"You are downloading Video >> {video_title}\n")
+            self.logger.info(f"From ({Youtube_channel}) Channel on YouTube\n")
+            self.logger.info(f"The Video Duration is >> {video_duration}\n")
+            self.logger.info(f"The Video will be Saved in >> {self.download_path}\n")
 
-            print(
-                f" - You are downloading Video >> {video_title}".title(),
-                end="\n\n",
-            )
-            print(
-                f" - From ({Youtube_channel}) Channel on YouTube".title(),
-                end="\n\n",
-            )
-            print(f" - The Video Duration is >> {video_duration}".title(), end="\n\n")
-            print(f" - The Video will be Saved in >> {self.download_path}", end="\n\n")
             print(
                 f" Now downloading the Video ... ".center(80, "=").title(), end="\n\n"
             )
@@ -120,16 +118,10 @@ class Video:
             return
 
         try:
-            video_option = {
-                "format": "best",
-                "outtmpl": self.download_path / "%(title)s.%(ext)s",
-                "quiet": True,
-                "no_warnings": True,
-            }
 
             self.logger.info(f"Downloading {video_info['title']} ...\n")
 
-            with yt_dlp.YoutubeDL(video_option) as video_download:
+            with yt_dlp.YoutubeDL(self.download_option) as video_download:
                 video_download.download([video_info["webpage_url"]])
 
             self.logger.debug(f"Successfully downloaded video: {video_info['title']}")
@@ -154,7 +146,7 @@ class Video:
                 self.logger.warning("Empty URL provided")
                 raise ValueError("URL cannot be empty.")
 
-            self.logger.debug(f"Processing video URL: {video_url}")
+            self.logger.debug(f"Processing video URL: {video_url}\n")
             print(" Loading ... ".center(80, "=").title(), end="\n\n")
 
             info = self.get_info(video_url)
@@ -167,7 +159,7 @@ class Video:
             input("Press Enter to Continue...")
 
         except Exception as e:
-            self.logger.error(f"Unexpected error in main: {e}")
+            self.logger.error(f"Unexpected error: {e}")
             input("Press Enter to Continue...")
 
 
